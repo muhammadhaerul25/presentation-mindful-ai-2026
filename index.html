@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindful AI - Yayasan Khouw Kalbe</title>
+    <link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Display:wght@400;700&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        .collab-container ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .collab-container ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .collab-container ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .collab-container ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slide-scaler" id="slideScaler">
+
+        <div class="progress-bar" id="progressBar"></div>
+
+        <div class="slide-counter" id="slideCounter">
+            <span id="currentSlide">1</span>
+            <span class="divider">/</span>
+            <span id="totalSlides">3</span>
+        </div>
+
+        <div class="nav-controls">
+            <button class="nav-btn" id="prevBtn" onclick="prevSlide()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="nav-btn" id="nextBtn" onclick="nextSlide()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="keyboard-hint" id="keyboardHint">
+            Press <kbd>→</kbd> or <kbd>Space</kbd> to navigate
+        </div>
+
+        <button class="fullscreen-btn" id="fullscreenBtn" onclick="toggleFullscreen()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+            </svg>
+        </button>
+
+        <div class="slides-container" id="slidesContainer">
+
+            <!-- ============================================================
+           SLIDE 1 — COVER
+           ============================================================ -->
+            <section class="slide slide-cover active" id="slide-1">
+                <div class="slide-label">Cover</div>
+                <div class="cover-bg">
+                    <div class="cover-dots"></div>
+                    <div class="cover-gradient"></div>
+                </div>
+                <div class="slide-content cover-layout">
+                    <div class="cover-meta">
+                        <div class="event-badge">
+                            <span class="gdg-dot dot-blue"></span>
+                            <span class="gdg-dot dot-red"></span>
+                            <span class="gdg-dot dot-yellow"></span>
+                            <span class="gdg-dot dot-green"></span>
+                            <span class="event-text">Mindful AI - Yayasan Khouw Kalbe</span>
+                        </div>
+                    </div>
+                    <div class="cover-body">
+                        <div class="cover-headline">
+                            <h1 class="cover-title">
+                                <span class="title-line title-kicker"><span class="kicker-dot"></span>Mindful AI</span>
+                                <span class="title-line">[Judul Utama Presentasi]</span>
+                                <span class="title-line accent-underline">[Sub-Judul Presentasi]</span>
+                            </h1>
+                            <h2 class="cover-subtitle">[Deskripsi singkat atau sub-topik materi]</h2>
+                            <p class="cover-presenter">Presented by <strong>Muhammad Haerul</strong></p>
+                        </div>
+                        <div class="cover-visual">
+                            <div class="ai-orb">
+                                <div class="orb-ring ring-1"></div>
+                                <div class="orb-ring ring-2"></div>
+                                <div class="orb-ring ring-3"></div>
+                                <div class="orb-core" style="overflow: hidden; background: white; width: 165px; height: 165px;">
+                                    <img src="assets/logo/logo-yayasan-khouw-kalbe.jpg" alt="Logo Yayasan Khouw Kalbe" style="width: 90%; height: 90%; object-fit: contain; border-radius: 50%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cover-tags-footer">
+                        <div class="cover-tags-footer-row">
+                            <span class="tag tag-blue">[Tag 1]</span>
+                            <span class="tag tag-green">[Tag 2]</span>
+                            <span class="tag tag-red">[Tag 3]</span>
+                            <span class="tag tag-purple">[Tag 4]</span>
+                            <span class="tag tag-purple">[Tag 5]</span>
+                            <span class="tag tag-google-solid tag-gem">[Tag 6]</span>
+                            <span class="tag tag-google-solid tag-anti">[Tag 7]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+           SLIDE 2 — SPEAKER INTRO (Redesigned)
+           ============================================================ -->
+            <section class="slide slide-speaker" id="slide-2">
+                <div class="slide-label">Speaker Introduction</div>
+                <div class="spk-bg">
+                    <div class="spk-bg-grid"></div>
+                    <div class="spk-bg-glow-left"></div>
+                    <div class="spk-bg-glow-right"></div>
+                </div>
+                <div class="slide-content spk-layout">
+
+                    <!-- LEFT — Identity card (EDIT SPEAKER CARD DETAILS HERE) -->
+                    <div class="spk-identity">
+                        <div class="spk-card">
+                            <div class="spk-avatar-wrap">
+                                <div class="spk-avatar-ring"></div>
+                                <div class="spk-avatar">
+                                    <img src="assets/images/muhammad haerul_formal photo_zoom_in.png"
+                                        alt="Muhammad Haerul" onerror="this.style.display='none'" />
+                                </div>
+                            </div>
+                            <div class="spk-name-block">
+                                <h2 class="spk-name">Muhammad Haerul, S.Kom</h2>
+                                <p class="spk-title-role">AI Engineer · 4 Years of Experience</p>
+                            </div>
+                            <div class="spk-edu-badge">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <span>haerulmuhammad01@gmail.com</span>
+                            </div>
+                            <div class="spk-socials">
+                                <a href="https://github.com/muhammadhaerul25" target="_blank" class="spk-social-pill">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                    </svg>
+                                    github.com/muhammadhaerul25
+                                </a>
+                                <a href="https://www.linkedin.com/in/muhammadhaerul" target="_blank"
+                                    class="spk-social-pill spk-social-accent">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                        <rect x="2" y="9" width="4" height="12" />
+                                        <circle cx="4" cy="4" r="2" />
+                                    </svg>
+                                    linkedin.com/in/muhammadhaerul
+                                </a>
+                                <span class="spk-social-pill">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                    </svg>
+                                    @muhammadhaerul.25
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT — Education + Experience + Awards + Speakership (EDIT EDUCATION, EXPERIENCE, AWARDS, & SPEAKERSHIPS HERE) -->
+                    <div class="spk-details spk-details-scrollable">
+
+                        <!-- Education -->
+                        <div class="spk-section">
+                            <div class="spk-section-header">
+                                <span class="spk-section-label">Education</span>
+                                <div class="spk-section-line"></div>
+                            </div>
+                            <div class="spk-timeline">
+                                <div class="spk-tl-item">
+                                    <div class="spk-tl-meta"><span class="spk-tl-year">2020</span></div>
+                                    <div class="spk-tl-dot" style="background:#4285F4"></div>
+                                    <div class="spk-tl-content">
+                                        <span class="spk-tl-role">Bachelor of Computer Science</span>
+                                        <span class="spk-tl-org">Universitas Hasanuddin</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Experience -->
+                        <div class="spk-section">
+                            <div class="spk-section-header">
+                                <span class="spk-section-label">Professional Experience</span>
+                                <div class="spk-section-line"></div>
+                            </div>
+                            <div class="spk-timeline">
+                                <div class="spk-tl-item">
+                                    <div class="spk-tl-meta"><span class="spk-tl-year present">Now</span></div>
+                                    <div class="spk-tl-dot"
+                                        style="background:#34A853;box-shadow:0 0 0 5px rgba(52,168,83,0.15)"></div>
+                                    <div class="spk-tl-content">
+                                        <span class="spk-tl-role">Co-Founder</span>
+                                        <span class="spk-tl-org">Aksarahub.id</span>
+                                    </div>
+                                </div>
+                                <div class="spk-tl-item">
+                                    <div class="spk-tl-meta"><span class="spk-tl-year present">2026</span></div>
+                                    <div class="spk-tl-dot"
+                                        style="background:#34A853;box-shadow:0 0 0 5px rgba(52,168,83,0.12)"></div>
+                                    <div class="spk-tl-content">
+                                        <span class="spk-tl-role">AI Team Lead</span>
+                                        <span class="spk-tl-org">RevoU</span>
+                                    </div>
+                                </div>
+                                <div class="spk-tl-item">
+                                    <div class="spk-tl-meta"><span class="spk-tl-year">2025</span></div>
+                                    <div class="spk-tl-dot" style="background:#4285F4"></div>
+                                    <div class="spk-tl-content">
+                                        <span class="spk-tl-role">AI Engineer</span>
+                                        <span class="spk-tl-org">Paper.id</span>
+                                    </div>
+                                </div>
+                                <div class="spk-tl-item">
+                                    <div class="spk-tl-meta"><span class="spk-tl-year">2024</span></div>
+                                    <div class="spk-tl-dot" style="background:#4285F4"></div>
+                                    <div class="spk-tl-content">
+                                        <span class="spk-tl-role">Computer Vision Engineer</span>
+                                        <span class="spk-tl-org">Masa Geosciences</span>
+                                    </div>
+                                </div>
+                                <div class="spk-tl-item">
+                                    <div class="spk-tl-meta"><span class="spk-tl-year">2023</span></div>
+                                    <div class="spk-tl-dot" style="background:#EA4335"></div>
+                                    <div class="spk-tl-content">
+                                        <span class="spk-tl-role">AI &amp; IoT Engineer</span>
+                                        <span class="spk-tl-org">XL Axiata</span>
+                                    </div>
+                                </div>
+                                <div class="spk-tl-item">
+                                    <div class="spk-tl-meta"><span class="spk-tl-year">2022</span></div>
+                                    <div class="spk-tl-dot" style="background:#FBBC04"></div>
+                                    <div class="spk-tl-content">
+                                        <span class="spk-tl-role">AI &amp; Software Engineer</span>
+                                        <span class="spk-tl-org">Kementerian Pendidikan, Kebudayaan, Riset dan Teknologi
+                                            RI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Honors & Awards + Speakership in two columns -->
+                        <div class="spk-bottom-row">
+                            <div class="spk-section spk-section-half">
+                                <div class="spk-section-header">
+                                    <span class="spk-section-label">Honors &amp; Awards</span>
+                                    <div class="spk-section-line"></div>
+                                </div>
+                                <div class="spk-awards spk-awards-col">
+                                    <div class="spk-award spk-award-gold">
+                                        <span class="spk-award-medal">🥇</span>
+                                        <div class="spk-award-text">
+                                            <span class="spk-award-title">1st Place — Open The Gate Hackathon</span>
+                                            <span class="spk-award-year">2026</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-award spk-award-silver">
+                                        <span class="spk-award-medal">🥈</span>
+                                        <div class="spk-award-text">
+                                            <span class="spk-award-title">2nd Place — Binar Academy Hackathon</span>
+                                            <span class="spk-award-year">2025</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-award">
+                                        <span class="spk-award-medal">🏅</span>
+                                        <div class="spk-award-text">
+                                            <span class="spk-award-title">Best Creativity — TechnoArt AI
+                                                Hackathon</span>
+                                            <span class="spk-award-year">2025</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-award">
+                                        <span class="spk-award-medal">🏅</span>
+                                        <div class="spk-award-text">
+                                            <span class="spk-award-title">Top 10 — Healthkathon BPJS</span>
+                                            <span class="spk-award-year">2022</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-award">
+                                        <span class="spk-award-medal">🏅</span>
+                                        <div class="spk-award-text">
+                                            <span class="spk-award-title">Top 20 — AI Talent Hub Indonesia</span>
+                                            <span class="spk-award-year">2026</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="spk-section spk-section-half">
+                                <div class="spk-section-header">
+                                    <span class="spk-section-label">Speakership</span>
+                                    <div class="spk-section-line"></div>
+                                </div>
+                                <div class="spk-speak-list">
+                                    <div class="spk-speak-item">
+                                        <span class="spk-speak-dot" style="background:#4285F4"></span>
+                                        <div class="spk-speak-text">
+                                            <span class="spk-speak-title">Speaker — GSA AI Forge</span>
+                                            <span class="spk-speak-org">GSA AI Forge · 2026</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-speak-item">
+                                        <span class="spk-speak-dot" style="background:#4285F4"></span>
+                                        <div class="spk-speak-text">
+                                            <span class="spk-speak-title">Speaker — Build with AI GDGoC Makassar</span>
+                                            <span class="spk-speak-org">GDGoC Makassar · 2026</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-speak-item">
+                                        <span class="spk-speak-dot" style="background:#4285F4"></span>
+                                        <div class="spk-speak-text">
+                                            <span class="spk-speak-title">Speaker — Webinar of AI for
+                                                Cybersecurity</span>
+                                            <span class="spk-speak-org">BSSN · 2025</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-speak-item">
+                                        <span class="spk-speak-dot" style="background:#EA4335"></span>
+                                        <div class="spk-speak-text">
+                                            <span class="spk-speak-title">Speaker — Workshop of AI for Web
+                                                Development</span>
+                                            <span class="spk-speak-org">Unsulbar · 2025</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-speak-item">
+                                        <span class="spk-speak-dot" style="background:#FBBC04"></span>
+                                        <div class="spk-speak-text">
+                                            <span class="spk-speak-title">Speaker — AI Demo Day</span>
+                                            <span class="spk-speak-org">Paper.id · 2025</span>
+                                        </div>
+                                    </div>
+                                    <div class="spk-speak-item">
+                                        <span class="spk-speak-dot" style="background:#34A853"></span>
+                                        <div class="spk-speak-text">
+                                            <span class="spk-speak-title">Speaker — AI &amp; IoT Visitation</span>
+                                            <span class="spk-speak-org">XL Axiata · 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+           SLIDE 3 — AGENDA
+           ============================================================ -->
+            <section class="slide slide-agenda" id="slide-3">
+                <div class="slide-label">Agenda</div>
+                <div class="slide-content agenda-layout">
+                    <div class="agenda-header">
+                        <p class="agenda-eyebrow">Daftar Isi</p>
+                        <h2 class="agenda-title">Table of Contents</h2>
+                    </div>
+                    <div class="agenda-chapters">
+                        <div class="chapter-item">
+                            <div class="chapter-num"><span class="chap-label">Chapter 1</span></div>
+                            <div class="chapter-content">
+                                <h3 class="chapter-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                            </div>
+                            <div class="chapter-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--blue)" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M8 12l2.5 2.5L16 9" />
+                                </svg></div>
+                        </div>
+                        <div class="chapter-item">
+                            <div class="chapter-num"><span class="chap-label">Chapter 2</span></div>
+                            <div class="chapter-content">
+                                <h3 class="chapter-title">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+                            </div>
+                            <div class="chapter-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--green)" stroke-width="1.5">
+                                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                                    <path d="M3 9h18M9 4v16" />
+                                </svg></div>
+                        </div>
+                    </div>
+                    <div class="hands-on-card">
+                        <div class="hands-on-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+                                stroke="var(--blue)" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg></div>
+                        <div class="hands-on-content">
+                            <span class="hands-on-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- /slides-container -->
+
+        <div class="slide-map" id="slideMap">
+            <button class="map-toggle" onclick="toggleSlideMap()" title="Slide overview">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+            </button>
+        </div>
+
+    </div><!-- /slide-scaler -->
+
+    <script src="scaler.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Slide Jump Modal -->
+    <div id="slide-jump-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);z-index:9999;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s ease;">
+        <div style="background:white;padding:32px;border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,0.15);width:400px;max-width:90%;transform:translateY(20px);transition:transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+            <h3 style="margin:0 0 16px 0;font-size:24px;color:#1a1a1a;font-weight:700;">Go to Slide</h3>
+            <p style="margin:0 0 24px 0;font-size:16px;color:#5f6368;" id="slide-jump-desc">Enter a slide number (1-3):</p>
+            <input type="number" id="slide-jump-input" style="width:100%;padding:14px 18px;border:2px solid #e8eaed;border-radius:12px;font-size:18px;margin-bottom:24px;outline:none;transition:border-color 0.2s;box-sizing:border-box;" placeholder="e.g. 2" onfocus="this.style.borderColor='#1a73e8'" onblur="this.style.borderColor='#e8eaed'">
+            <div style="display:flex;justify-content:flex-end;gap:12px;">
+                <button onclick="closeSlideJumpModal()" style="padding:12px 24px;border:none;background:transparent;color:#5f6368;font-size:16px;font-weight:600;cursor:pointer;border-radius:100px;transition:background 0.2s;">Cancel</button>
+                <button onclick="submitSlideJump()" style="padding:12px 24px;border:none;background:#1a73e8;color:white;font-size:16px;font-weight:600;cursor:pointer;border-radius:100px;transition:background 0.2s;box-shadow:0 4px 12px rgba(26,115,232,0.3);">Go to Slide</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openSlideJumpModal(maxSlides) {
+            const modal = document.getElementById('slide-jump-modal');
+            const desc = document.getElementById('slide-jump-desc');
+            const input = document.getElementById('slide-jump-input');
+            
+            desc.textContent = `Enter a slide number (1–${maxSlides}):`;
+            input.value = '';
+            
+            modal.style.display = 'flex';
+            // Trigger reflow
+            void modal.offsetWidth;
+            modal.style.opacity = '1';
+            modal.children[0].style.transform = 'translateY(0)';
+            
+            setTimeout(() => input.focus(), 300);
+            
+            // Handle enter key
+            input.onkeydown = (e) => {
+                if (e.key === 'Enter') submitSlideJump();
+                if (e.key === 'Escape') closeSlideJumpModal();
+            };
+        }
+
+        function closeSlideJumpModal() {
+            const modal = document.getElementById('slide-jump-modal');
+            modal.style.opacity = '0';
+            modal.children[0].style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 200);
+        }
+
+        function submitSlideJump() {
+            const input = document.getElementById('slide-jump-input');
+            const num = parseInt(input.value);
+            closeSlideJumpModal();
+            
+            if (window.handleSlideJumpCallback) {
+                window.handleSlideJumpCallback(num);
+            }
+        }
+    </script>
+</body>
+
+</html>
