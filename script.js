@@ -26,6 +26,7 @@ function getStepEls(slideEl) {
 }
 
 function showStep(slideEl, stepIndex) {
+    slideEl.setAttribute('data-current-step', stepIndex);
     const stepEls = getStepEls(slideEl);
     if (!stepEls.length) return;
     stepEls.forEach((el, i) => {
