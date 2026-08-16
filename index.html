@@ -42,7 +42,7 @@
         <div class="slide-counter" id="slideCounter">
             <span id="currentSlide">1</span>
             <span class="divider">/</span>
-            <span id="totalSlides">19</span>
+            <span id="totalSlides">24</span>
         </div>
 
         <div class="nav-controls">
@@ -398,7 +398,7 @@
                         <div class="chapter-item">
                             <div class="chapter-num"><span class="chap-label">Chapter 1</span></div>
                             <div class="chapter-content">
-                                <h3 class="chapter-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                                <h3 class="chapter-title">AI Awareness & Understanding</h3>
                             </div>
                             <div class="chapter-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
                                     stroke="var(--blue)" stroke-width="1.5">
@@ -409,8 +409,7 @@
                         <div class="chapter-item">
                             <div class="chapter-num"><span class="chap-label">Chapter 2</span></div>
                             <div class="chapter-content">
-                                <h3 class="chapter-title">Sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua.</h3>
+                                <h3 class="chapter-title">AI for Student Productivity</h3>
                             </div>
                             <div class="chapter-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
                                     stroke="var(--green)" stroke-width="1.5">
@@ -430,6 +429,31 @@
                                 laboris.</span>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+           CHAPTER 1 COVER
+           ============================================================ -->
+            <section class="slide" id="slide-chap1" style="background:var(--surface);">
+                <!-- Decorative orbs -->
+                <div style="position:absolute;top:-100px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(52,168,83,0.08) 0%,transparent 65%);pointer-events:none;"></div>
+                <div style="position:absolute;bottom:-80px;left:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(251,188,4,0.06) 0%,transparent 65%);pointer-events:none;"></div>
+                <div style="position:absolute;inset:0;background-image:radial-gradient(circle,var(--border) 1.5px,transparent 1.5px);background-size:60px 60px;opacity:0.3;pointer-events:none;"></div>
+                
+                <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;height:100%;padding:0 var(--slide-pad-x);z-index:2;">
+                    
+                    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(52,168,83,0.1);border:1px solid rgba(52,168,83,0.2);padding:10px 24px;border-radius:100px;margin-bottom:24px;">
+                        <span style="width:7px;height:7px;background:#34A853;border-radius:50%;display:inline-block;box-shadow:0 0 8px rgba(52,168,83,0.4);"></span>
+                        <span style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);">Chapter 1</span>
+                    </div>
+
+                    <h1 style="font-family:var(--font-display);font-size:72px;font-weight:900;letter-spacing:-2px;line-height:1.1;margin:0;color:var(--text-primary);">
+                        AI Awareness &amp; <span style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Understanding</span>
+                    </h1>
+                    <p style="font-size:24px;color:var(--text-secondary);max-width:800px;margin:24px 0 0 0;line-height:1.6;">
+                        Memahami apa itu AI, bagaimana cara kerjanya, serta menyadari batasan dan potensi kesalahannya.
+                    </p>
                 </div>
             </section>
 
@@ -1930,32 +1954,32 @@
                 <div class="reveal-step">
                     <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;gap:40px;z-index:2;padding:0 var(--slide-pad-x);">
                         
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;width:100%;max-width:1100px;">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;width:100%;max-width:1300px;">
                             <!-- Left: Better Prediction ≠ Guaranteed Correct -->
-                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:40px;box-shadow:var(--shadow-md);text-align:left;">
-                                <div style="font-size:13px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;">Prinsip 1</div>
-                                <h3 style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--text-primary);margin-bottom:16px;line-height:1.2;">
+                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:48px;box-shadow:var(--shadow-md);text-align:left;">
+                                <div style="font-size:16px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:14px;">Prinsip 1</div>
+                                <h3 style="font-family:var(--font-display);font-size:38px;font-weight:900;color:var(--text-primary);margin-bottom:20px;line-height:1.2;">
                                     Prediksi Lebih Baik <br><span style="color:var(--text-muted);font-weight:300;">≠</span> <span style="background:linear-gradient(135deg,#EA4335,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Pasti Benar</span>
                                 </h3>
-                                <p style="font-size:17px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px;">AI dapat menghasilkan prediksi yang lebih baik dengan data yang lebih baik.</p>
-                                <div style="background:rgba(234,67,53,0.05);border-left:3px solid #EA4335;padding:12px 16px;border-radius:0 8px 8px 0;">
-                                    <p style="font-size:15px;color:var(--text-primary);line-height:1.5;margin:0;">Prediksi yang lebih baik <strong>meningkatkan kemungkinan</strong>, tetapi <strong>tidak menjamin</strong> hasilnya selalu benar.</p>
+                                <p style="font-size:20px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">AI dapat menghasilkan prediksi yang lebih baik dengan data yang lebih baik.</p>
+                                <div style="background:rgba(234,67,53,0.05);border-left:4px solid #EA4335;padding:16px 20px;border-radius:0 8px 8px 0;">
+                                    <p style="font-size:18px;color:var(--text-primary);line-height:1.5;margin:0;">Prediksi yang lebih baik <strong>meningkatkan kemungkinan</strong>, tetapi <strong>tidak menjamin</strong> hasilnya selalu benar.</p>
                                 </div>
                             </div>
 
                             <!-- Right: AI ≠ Magic -->
-                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:40px;box-shadow:var(--shadow-md);text-align:left;">
-                                <div style="font-size:13px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;">Prinsip 2</div>
-                                <h3 style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--text-primary);margin-bottom:16px;line-height:1.2;">
+                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:48px;box-shadow:var(--shadow-md);text-align:left;">
+                                <div style="font-size:16px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:14px;">Prinsip 2</div>
+                                <h3 style="font-family:var(--font-display);font-size:38px;font-weight:900;color:var(--text-primary);margin-bottom:20px;line-height:1.2;">
                                     AI <span style="color:var(--text-muted);font-weight:300;">≠</span> <span style="background:linear-gradient(135deg,#9B72F7,#4285F4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Sihir</span>
                                 </h3>
-                                <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px;">
-                                    <div style="display:flex;align-items:center;gap:10px;font-size:16px;color:var(--text-secondary);"><span style="color:#EA4335;font-weight:700;">&#10005;</span> Bukan "Tahu semuanya"</div>
-                                    <div style="display:flex;align-items:center;gap:10px;font-size:16px;color:var(--text-secondary);"><span style="color:#EA4335;font-weight:700;">&#10005;</span> Bukan "Selalu benar"</div>
-                                    <div style="display:flex;align-items:center;gap:10px;font-size:16px;color:var(--text-secondary);"><span style="color:#EA4335;font-weight:700;">&#10005;</span> Bukan "Berpikir seperti manusia"</div>
+                                <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:20px;">
+                                    <div style="display:flex;align-items:center;gap:12px;font-size:20px;color:var(--text-secondary);"><span style="color:#EA4335;font-weight:700;">&#10005;</span> Bukan "Tahu semuanya"</div>
+                                    <div style="display:flex;align-items:center;gap:12px;font-size:20px;color:var(--text-secondary);"><span style="color:#EA4335;font-weight:700;">&#10005;</span> Bukan "Selalu benar"</div>
+                                    <div style="display:flex;align-items:center;gap:12px;font-size:20px;color:var(--text-secondary);"><span style="color:#EA4335;font-weight:700;">&#10005;</span> Bukan "Berpikir seperti manusia"</div>
                                 </div>
-                                <div style="background:rgba(66,133,244,0.05);border-left:3px solid #4285F4;padding:12px 16px;border-radius:0 8px 8px 0;">
-                                    <p style="font-size:15px;color:var(--text-primary);line-height:1.5;margin:0;">AI bekerja dengan memanfaatkan <strong>data, algoritma, dan model</strong> untuk mengenali pola.</p>
+                                <div style="background:rgba(66,133,244,0.05);border-left:4px solid #4285F4;padding:16px 20px;border-radius:0 8px 8px 0;">
+                                    <p style="font-size:18px;color:var(--text-primary);line-height:1.5;margin:0;">AI bekerja dengan memanfaatkan <strong>data, algoritma, dan model</strong> untuk mengenali pola.</p>
                                 </div>
                             </div>
                         </div>
@@ -1995,6 +2019,226 @@
                     </div>
                 </div>
 
+            </section>
+
+            <!-- ============================================================
+           SLIDE 20 — TRANSITION TO CHAPTER 2
+           ============================================================ -->
+            <section class="slide" id="slide-20" data-steps="3" style="background:var(--bg);">
+                <div class="slide-label">Chapter 2</div>
+
+                <!-- Subtle background elements -->
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(155,114,247,0.04) 0%,transparent 70%);pointer-events:none;"></div>
+                
+                <!-- STEP 1: Context -->
+                <div class="reveal-step">
+                    <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;padding:0 var(--slide-pad-x);z-index:2;gap:0;">
+                        <p style="font-size:32px;color:var(--text-secondary);max-width:1000px;margin:0 auto;line-height:1.6;animation:fadeDown 0.8s ease-out both;">
+                            Setelah memahami <strong style="color:var(--text-primary);">apa itu AI</strong>, <strong style="color:var(--text-primary);">bagaimana AI bekerja</strong>, dan <strong style="color:var(--text-primary);">mengapa AI bisa salah</strong>, sekarang kita masuk ke pertanyaan yang lebih dekat dengan <strong style="color:var(--blue);">kehidupan mahasiswa</strong>:
+                        </p>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Main Question -->
+                <div class="reveal-step">
+                    <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;padding:0 var(--slide-pad-x);z-index:2;gap:40px;">
+                        <p style="font-size:24px;color:var(--text-secondary);max-width:900px;margin:0 auto;line-height:1.6;">
+                            Setelah memahami <strong style="color:var(--text-primary);">apa itu AI</strong>, <strong style="color:var(--text-primary);">bagaimana AI bekerja</strong>, dan <strong style="color:var(--text-primary);">mengapa AI bisa salah</strong>, sekarang kita masuk ke pertanyaan yang lebih dekat dengan <strong style="color:var(--blue);">kehidupan mahasiswa</strong>:
+                        </p>
+                        <h2 style="font-family:var(--font-display);font-size:56px;font-weight:800;color:var(--text-primary);line-height:1.3;max-width:1000px;margin:0 auto;">
+                            Kalau AI sudah ada di mana-mana, bagaimana AI mengubah <strong style="background:linear-gradient(135deg,#9B72F7,#4285F4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">produktivitas kita</strong> sebagai Mahasiswa?
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Explanation -->
+                <div class="reveal-step">
+                    <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;padding:0 var(--slide-pad-x);z-index:2;gap:40px;">
+                        <p style="font-size:24px;color:var(--text-secondary);max-width:900px;margin:0 auto;line-height:1.6;">
+                            Setelah memahami <strong style="color:var(--text-primary);">apa itu AI</strong>, <strong style="color:var(--text-primary);">bagaimana AI bekerja</strong>, dan <strong style="color:var(--text-primary);">mengapa AI bisa salah</strong>, sekarang kita masuk ke pertanyaan yang lebih dekat dengan <strong style="color:var(--blue);">kehidupan mahasiswa</strong>:
+                        </p>
+                        <h2 style="font-family:var(--font-display);font-size:56px;font-weight:800;color:var(--text-primary);line-height:1.3;max-width:1000px;margin:0 auto;">
+                            Kalau AI sudah ada di mana-mana, bagaimana AI mengubah <strong style="background:linear-gradient(135deg,#9B72F7,#4285F4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">produktivitas kita</strong> sebagai Mahasiswa?
+                        </h2>
+                        
+                        <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:32px 48px;box-shadow:var(--shadow-md);max-width:960px;margin:0 auto;position:relative;overflow:hidden;animation:fadeUp 0.6s ease-out both;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#9B72F7,#4285F4);"></div>
+                            <p style="font-size:21px;color:var(--text-secondary);line-height:1.75;margin:0;">
+                                AI bukan lagi sekadar teknologi yang kita gunakan sesekali. Saat ini, AI sudah menjadi bagian dari ekosistem belajar mahasiswa—mulai dari <strong style="color:var(--text-primary);">mencari informasi, memahami materi, menulis, melakukan riset, sampai membantu coding</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ============================================================
+           CHAPTER 2 COVER
+           ============================================================ -->
+            <section class="slide" id="slide-chap2" style="background:var(--surface);">
+                <!-- Decorative orbs -->
+                <div style="position:absolute;top:-100px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(52,168,83,0.08) 0%,transparent 65%);pointer-events:none;"></div>
+                <div style="position:absolute;bottom:-80px;left:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(251,188,4,0.06) 0%,transparent 65%);pointer-events:none;"></div>
+                <div style="position:absolute;inset:0;background-image:radial-gradient(circle,var(--border) 1.5px,transparent 1.5px);background-size:60px 60px;opacity:0.3;pointer-events:none;"></div>
+                
+                <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;height:100%;padding:0 var(--slide-pad-x);z-index:2;">
+                    
+                    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(52,168,83,0.1);border:1px solid rgba(52,168,83,0.2);padding:10px 24px;border-radius:100px;margin-bottom:24px;">
+                        <span style="width:7px;height:7px;background:#34A853;border-radius:50%;display:inline-block;box-shadow:0 0 8px rgba(52,168,83,0.4);"></span>
+                        <span style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);">Chapter 2</span>
+                    </div>
+
+                    <h1 style="font-family:var(--font-display);font-size:72px;font-weight:900;letter-spacing:-2px;line-height:1.1;margin:0;color:var(--text-primary);">
+                        AI Personalization for Student <span style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Productivity</span>
+                    </h1>
+                    <p style="font-size:24px;color:var(--text-secondary);max-width:800px;margin:24px 0 0 0;line-height:1.6;">
+                        Bagaimana mengoptimalkan peran AI dari sekadar mesin pencari menjadi asisten cerdas yang dipersonalisasi khusus untuk mendukung alur kerja (workflow) akademik dan produktivitas Anda.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ============================================================
+           SLIDE 23 — AI Super Apps & Capabilities
+           ============================================================ -->
+            <section class="slide" id="slide-23" data-steps="2" style="background:var(--surface);">
+                
+                <!-- Background glow -->
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1000px;height:1000px;border-radius:50%;background:radial-gradient(circle,rgba(52,168,83,0.04) 0%,transparent 65%);pointer-events:none;"></div>
+                <div style="position:absolute;inset:0;background-image:radial-gradient(circle,var(--border) 1.5px,transparent 1.5px);background-size:44px 44px;opacity:0.3;pointer-events:none;"></div>
+
+                <!-- STEP 1 -->
+                <div class="reveal-step">
+                    <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;padding:0 var(--slide-pad-x);gap:32px;z-index:2;">
+                        <h2 style="font-family:var(--font-display);font-size:72px;font-weight:900;color:var(--text-primary);margin:0;line-height:1.1;letter-spacing:-1px;">
+                            The <span style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">AI Multimodal</span>
+                        </h2>
+                        <p style="font-size:26px;color:var(--text-secondary);margin:0;line-height:1.6;max-width:800px;font-weight:400;">
+                            Mahasiswa sekarang tidak lagi hanya menggunakan satu AI untuk satu kebutuhan.
+                        </p>
+                        <div style="background:white;border:1px solid rgba(52,168,83,0.2);border-radius:24px;padding:24px 32px;box-shadow:0 12px 24px rgba(52,168,83,0.08);max-width:900px;position:relative;overflow:hidden;">
+                            <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#34A853,#FBBC04);"></div>
+                            <p style="font-size:22px;color:var(--text-primary);margin:0;line-height:1.6;font-weight:500;">
+                                Saat ini, AI telah berevolusi menjadi <strong style="color:var(--green);font-weight:800;">“AI Multimodal”</strong>—satu platform tersentralisasi yang menggabungkan seluruh kemampuan AI super cerdas secara komprehensif.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="reveal-step">
+                    <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;padding:0 var(--slide-pad-x);gap:40px;z-index:2;">
+                        
+                        <!-- Top: Text -->
+                        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+                            <h2 style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--text-primary);margin:0;line-height:1.1;letter-spacing:-1px;">
+                                The <span style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">AI Multimodal</span>
+                            </h2>
+                            <p style="font-size:20px;color:var(--text-secondary);margin:0;line-height:1.6;max-width:700px;font-weight:400;">
+                                Satu aplikasi yang merangkum berbagai kemampuan super:
+                            </p>
+                        </div>
+
+                        <!-- Bottom: Capabilities Grid -->
+                        <div style="width:100%;max-width:1100px;">
+                            <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;width:100%;">
+                                <!-- Row 1 -->
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.1s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(66,133,244,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">💬</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Chat &amp; Brainstorm</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.15s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(52,168,83,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🔎</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Web Research</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(251,188,4,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📄</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Analisis Dokumen</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(234,67,53,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">✍️</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Menulis &amp; Editing</span>
+                                </div>
+                                
+                                <!-- Row 2 -->
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(155,114,247,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📊</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Analisis Data</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.35s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(33,150,243,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🌍</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Belajar Bahasa</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.4s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,152,0,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🎨</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Buat Visualisasi</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.45s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,188,212,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🎙️</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Diskusi Suara</span>
+                                </div>
+                                
+                                <!-- Row 3 -->
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.5s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(233,30,99,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🧠</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Problem Solving</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.55s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(76,175,80,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📚</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Tutor Belajar Pribadi</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.6s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,150,136,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📅</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Manajemen Waktu</span>
+                                </div>
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.65s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                    <div style="width:44px;height:44px;border-radius:12px;background:rgba(63,81,181,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🎭</div>
+                                    <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Simulasi (Roleplay)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
+           SLIDE 24 — QUESTION TRANSITION
+           ============================================================ -->
+            <section class="slide" id="slide-24" data-steps="2" style="background:var(--bg);">
+                <div class="slide-label">The Right Question</div>
+
+                <!-- STEP 1: Old Question -->
+                <div class="reveal-step">
+                    <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;padding:0 var(--slide-pad-x);z-index:2;gap:24px;">
+                        <p style="font-size:24px;color:var(--text-secondary);max-width:900px;margin:0 auto;line-height:1.6;font-weight:500;">
+                            Jadi pertanyaannya <strong style="color:var(--red);">bukan</strong> lagi:
+                        </p>
+                        <h2 style="font-family:var(--font-display);font-size:48px;font-weight:700;color:#9ca3af;line-height:1.3;max-width:1000px;margin:0 auto;text-decoration:line-through;">
+                            “AI apa yang terbaik untuk saya gunakan?”
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- STEP 2: New Question -->
+                <div class="reveal-step">
+                    <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;padding:0 var(--slide-pad-x);z-index:2;gap:24px;">
+                        <p style="font-size:24px;color:var(--text-secondary);max-width:900px;margin:0 auto;line-height:1.6;font-weight:500;">
+                            Jadi pertanyaannya <strong style="color:var(--red);">bukan</strong> lagi:
+                        </p>
+                        <h2 style="font-family:var(--font-display);font-size:48px;font-weight:700;color:#9ca3af;line-height:1.3;max-width:1000px;margin:0 auto;text-decoration:line-through;">
+                            “AI apa yang terbaik untuk saya gunakan?”
+                        </h2>
+                        
+                        <div style="margin-top:24px;width:100%;">
+                            <p style="font-size:24px;color:var(--green);font-weight:700;margin:0 0 20px 0;letter-spacing:1px;">Tetapi:</p>
+                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:48px;box-shadow:var(--shadow-lg);max-width:960px;margin:0 auto;position:relative;overflow:hidden;animation:fadeUp 0.6s ease-out both;">
+                                <div style="position:absolute;top:0;left:0;width:100%;height:6px;background:linear-gradient(90deg,#34A853,#FBBC04);"></div>
+                                <h2 style="font-family:var(--font-display);font-size:52px;font-weight:800;color:var(--text-primary);line-height:1.3;margin:0;">
+                                    “AI mana yang <strong style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">paling cocok</strong> untuk pekerjaan yang sedang saya lakukan?”
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
         </div><!-- /slides-container -->
