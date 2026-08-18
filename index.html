@@ -472,19 +472,60 @@
                 <div style="position:absolute;bottom:-80px;left:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(251,188,4,0.06) 0%,transparent 65%);pointer-events:none;"></div>
                 <div style="position:absolute;inset:0;background-image:radial-gradient(circle,var(--border) 1.5px,transparent 1.5px);background-size:60px 60px;opacity:0.3;pointer-events:none;"></div>
 
-                <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;height:100%;padding:0 var(--slide-pad-x);z-index:2;">
+                <div class="slide-content" style="display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 var(--slide-pad-x);z-index:2;gap:40px;">
+                    <!-- LEFT COLUMN -->
+                    <div style="flex:1;max-width:650px;">
+                        <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(52,168,83,0.1);border:1px solid rgba(52,168,83,0.2);padding:10px 24px;border-radius:100px;margin-bottom:24px;">
+                            <span style="width:7px;height:7px;background:#34A853;border-radius:50%;display:inline-block;box-shadow:0 0 8px rgba(52,168,83,0.4);"></span>
+                            <span style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);">Chapter 1</span>
+                        </div>
 
-                    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(52,168,83,0.1);border:1px solid rgba(52,168,83,0.2);padding:10px 24px;border-radius:100px;margin-bottom:24px;">
-                        <span style="width:7px;height:7px;background:#34A853;border-radius:50%;display:inline-block;box-shadow:0 0 8px rgba(52,168,83,0.4);"></span>
-                        <span style="font-size:14px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);">Chapter 1</span>
+                        <h1 style="font-family:var(--font-display);font-size:72px;font-weight:900;letter-spacing:-2px;line-height:1.1;margin:0;color:var(--text-primary);">
+                            AI <span style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Awareness &amp; Understanding</span>
+                        </h1>
+                        <p style="font-size:24px;color:var(--text-secondary);max-width:800px;margin:24px 0 0 0;line-height:1.6;">
+                            Memahami apa itu AI, bagaimana cara kerjanya, serta menyadari batasan dan potensi kesalahannya.
+                        </p>
                     </div>
 
-                    <h1 style="font-family:var(--font-display);font-size:72px;font-weight:900;letter-spacing:-2px;line-height:1.1;margin:0;color:var(--text-primary);">
-                        AI <span style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Awareness &amp; Understanding</span>
-                    </h1>
-                    <p style="font-size:24px;color:var(--text-secondary);max-width:800px;margin:24px 0 0 0;line-height:1.6;">
-                        Memahami apa itu AI, bagaimana cara kerjanya, serta menyadari batasan dan potensi kesalahannya.
-                    </p>
+                    <!-- RIGHT COLUMN: Floating Topic Cards -->
+                    <div style="flex:1;display:flex;flex-direction:column;gap:20px;position:relative;">
+                        <!-- Glow behind cards -->
+                        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:450px;height:450px;background:radial-gradient(circle,rgba(52,168,83,0.08) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
+                        
+                        <!-- Topic 1 -->
+                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transform:translateX(0);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(-12px)';this.style.boxShadow='0 20px 48px rgba(66,133,244,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='translateX(0)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
+                            <div style="width:60px;height:60px;background:linear-gradient(135deg,rgba(66,133,244,0.1),rgba(66,133,244,0.02));border-radius:18px;display:flex;align-items:center;justify-content:center;color:#4285F4;flex-shrink:0;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--text-primary);">Apa itu AI?</div>
+                                <div style="font-size:15px;color:var(--text-muted);margin-top:6px;line-height:1.4;">Konsep dasar dan demistifikasi kecerdasan buatan.</div>
+                            </div>
+                        </div>
+
+                        <!-- Topic 2 -->
+                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transform:translateX(40px);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(28px)';this.style.boxShadow='0 20px 48px rgba(52,168,83,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='translateX(40px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
+                            <div style="width:60px;height:60px;background:linear-gradient(135deg,rgba(52,168,83,0.1),rgba(52,168,83,0.02));border-radius:18px;display:flex;align-items:center;justify-content:center;color:#34A853;flex-shrink:0;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--text-primary);">Cara Kerja AI</div>
+                                <div style="font-size:15px;color:var(--text-muted);margin-top:6px;line-height:1.4;">Mekanisme pemrosesan data, pola, dan prediksi.</div>
+                            </div>
+                        </div>
+
+                        <!-- Topic 3 -->
+                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transform:translateX(80px);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(68px)';this.style.boxShadow='0 20px 48px rgba(251,188,4,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='translateX(80px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
+                            <div style="width:60px;height:60px;background:linear-gradient(135deg,rgba(251,188,4,0.1),rgba(251,188,4,0.02));border-radius:18px;display:flex;align-items:center;justify-content:center;color:#FBBC04;flex-shrink:0;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            </div>
+                            <div>
+                                <div style="font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--text-primary);">Batasan AI</div>
+                                <div style="font-size:15px;color:var(--text-muted);margin-top:6px;line-height:1.4;">Bias, halusinasi, dan cara mitigasi error.</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
