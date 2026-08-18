@@ -1482,20 +1482,25 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
 
                     <!-- Left: Text -->
                     <div style="display:flex;flex-direction:column;gap:20px;">
-                        <div style="display:flex;align-items:center;gap:16px;margin-bottom:4px;">
-                            <div style="width:56px;height:56px;border-radius:16px;background:rgba(29,185,84,0.1);display:flex;align-items:center;justify-content:center;font-size:34px;">🎵</div>
-                            <h2 style="font-family:var(--font-display);font-size:43px;font-weight:800;color:var(--text-primary);">Rekomendasi Lagu Spotify</h2>
+                        <div style="display:flex;align-items:center;gap:18px;margin-bottom:12px;">
+                            <div style="width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,rgba(29,185,84,0.15),rgba(29,185,84,0.05));border:1px solid rgba(29,185,84,0.3);display:flex;align-items:center;justify-content:center;color:#1DB954;box-shadow:0 8px 24px rgba(29,185,84,0.2), inset 0 0 0 1px rgba(255,255,255,0.8);backdrop-filter:blur(10px);">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                            </div>
+                            <h2 style="font-family:var(--font-display);font-size:46px;font-weight:900;color:var(--text-primary);letter-spacing:-0.5px;">Rekomendasi Lagu Spotify</h2>
                         </div>
 
                         <p style="font-size:20px;color:var(--text-secondary);line-height:1.6;">
                             AI memprediksi lagu yang mungkin kamu suka berdasarkan pola lagu yang kamu dengarkan dan perilaku pengguna lain yang memiliki pola selera musik yang mirip denganmu.
                         </p>
 
-                        <div style="background:var(--bg);border-left:4px solid #1DB954;padding:20px 24px;border-radius:0 16px 16px 0;">
-                            <div style="font-size:17px;font-weight:700;color:var(--text-muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">Contoh Kasus</div>
+                        <div style="background:linear-gradient(135deg,rgba(29,185,84,0.05),rgba(29,185,84,0.01));border:1px solid rgba(29,185,84,0.2);padding:24px 32px;border-radius:24px;box-shadow:0 12px 32px rgba(29,185,84,0.05), inset 0 0 0 1px rgba(255,255,255,0.8);backdrop-filter:blur(20px);position:relative;overflow:hidden;">
+                            <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom, #1DB954, #121212);"></div>
+                            <div style="font-size:14px;font-weight:800;color:#1DB954;margin-bottom:12px;text-transform:uppercase;letter-spacing:1.5px;display:flex;align-items:center;gap:8px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Contoh Kasus
+                            </div>
                             <div style="font-size:19px;color:var(--text-primary);line-height:1.7;">
-                                Kamu sering mendengarkan lagu-lagu <strong style="color:var(--text-primary);">Taylor Swift</strong>.<br>
-                                Sistem menemukan pola bahwa pengguna dengan kebiasaan mendengarkan yang mirip juga sering mendengarkan:<br>
+                                Kamu sering mendengarkan lagu-lagu <strong style="color:var(--text-primary);background:rgba(29,185,84,0.1);padding:2px 8px;border-radius:6px;">Taylor Swift</strong>.<br>
+                                Sistem menemukan pola bahwa pengguna dengan selera serupa juga memutar:<br>
                                 <strong style="color:#1DB954;">Olivia Rodrigo, Sabrina Carpenter, Gracie Abrams</strong>.
                             </div>
                         </div>
@@ -1505,22 +1510,23 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         </p>
 
                         <!-- Pipeline -->
-                        <div style="margin-top:10px;display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);padding:14px 20px;border-radius:100px;width:fit-content;box-shadow:var(--shadow-sm);font-size:17px;">
-                            <span style="font-weight:600;color:var(--text-primary);">Riwayat musik</span>
-                            <span style="color:var(--border);">→</span>
-                            <span style="font-weight:600;color:var(--text-primary);">Pola selera</span>
-                            <span style="color:var(--border);">→</span>
-                            <span style="font-weight:600;color:var(--text-primary);">Prediksi preferensi</span>
-                            <span style="color:var(--border);">→</span>
-                            <span style="font-weight:700;color:#1DB954;">Rekomendasi lagu</span>
+                        <!-- Pipeline -->
+                        <div style="margin-top:20px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.85);border:1px solid rgba(29,185,84,0.2);padding:16px 24px;border-radius:100px;width:fit-content;box-shadow:0 12px 32px rgba(29,185,84,0.1), inset 0 0 0 1px rgba(255,255,255,0.9);backdrop-filter:blur(10px);font-size:16px;">
+                            <span style="font-weight:700;color:var(--text-primary);">Riwayat musik</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(29,185,84,0.5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            <span style="font-weight:700;color:var(--text-primary);">Pola selera</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(29,185,84,0.5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            <span style="font-weight:700;color:var(--text-primary);">Prediksi preferensi</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(29,185,84,0.5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            <span style="font-weight:900;background:linear-gradient(90deg, #1DB954, #1ed760);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 8px rgba(29,185,84,0.3));">Rekomendasi lagu</span>
                         </div>
                     </div>
 
                     <!-- Right: Visual -->
-                    <div style="display:flex;justify-content:center;align-items:center;position:relative;transform:scale(1.2);transform-origin:center;">
-                        <div style="position:absolute;width:100%;height:100%;background:radial-gradient(circle,rgba(29,185,84,0.08) 0%,transparent 60%);z-index:0;"></div>
+                    <div style="display:flex;justify-content:center;align-items:center;position:relative;transform-origin:center;padding-top:20px;">
+                        <div style="position:absolute;width:120%;height:120%;background:radial-gradient(circle,rgba(29,185,84,0.12) 0%,transparent 60%);z-index:0;animation:pulseGlow 4s infinite alternate;"></div>
 
-                        <div style="width:340px;background:#121212;border-radius:32px;padding:28px 24px;box-shadow:0 24px 60px rgba(0,0,0,0.25);position:relative;z-index:1;display:flex;flex-direction:column;gap:20px;border:1px solid #282828;">
+                        <div style="width:340px;background:#121212;border-radius:32px;padding:28px 24px;box-shadow:0 24px 60px rgba(0,0,0,0.25);position:relative;z-index:1;display:flex;flex-direction:column;gap:20px;border:1px solid #282828;animation:floatPhone 6.5s ease-in-out infinite alternate;">
                             <div style="font-size:15px;font-weight:700;color:#fff;">Made for You</div>
                             <div style="display:flex;flex-direction:column;gap:12px;">
                                 <!-- Spotify Item -->
@@ -1561,29 +1567,33 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
 
                     <!-- Left: Text -->
                     <div style="display:flex;flex-direction:column;gap:18px;">
-                        <div style="display:flex;align-items:center;gap:16px;margin-bottom:0;">
-                            <div style="width:56px;height:56px;border-radius:16px;background:rgba(255,0,80,0.1);display:flex;align-items:center;justify-content:center;font-size:34px;">📱</div>
-                            <h2 style="font-family:var(--font-display);font-size:43px;font-weight:800;color:var(--text-primary);">FYP TikTok</h2>
+                        <div style="display:flex;align-items:center;gap:18px;margin-bottom:8px;">
+                            <div style="width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,rgba(255,0,80,0.1),rgba(0,242,254,0.1));border:1px solid rgba(255,0,80,0.2);display:flex;align-items:center;justify-content:center;color:#FF0050;box-shadow:0 8px 24px rgba(255,0,80,0.15), inset 0 0 0 1px rgba(255,255,255,0.8);backdrop-filter:blur(10px);">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                            </div>
+                            <h2 style="font-family:var(--font-display);font-size:46px;font-weight:900;color:var(--text-primary);letter-spacing:-0.5px;">FYP TikTok</h2>
                         </div>
 
                         <p style="font-size:19px;color:var(--text-secondary);line-height:1.6;">
                             AI memprediksi konten yang kemungkinan kamu sukai berdasarkan pola interaksi kamu dengan konten sebelumnya. Sistem dapat memperhatikan:
                         </p>
 
-                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                            <span style="background:var(--bg);border:1px solid var(--border);padding:6px 14px;border-radius:100px;font-size:16px;font-weight:600;color:var(--text-secondary);">👀 Konten ditonton</span>
-                            <span style="background:var(--bg);border:1px solid var(--border);padding:6px 14px;border-radius:100px;font-size:16px;font-weight:600;color:var(--text-secondary);">⏱️ Durasi menonton</span>
-                            <span style="background:var(--bg);border:1px solid var(--border);padding:6px 14px;border-radius:100px;font-size:16px;font-weight:600;color:var(--text-secondary);">❤️ Like</span>
-                            <span style="background:var(--bg);border:1px solid var(--border);padding:6px 14px;border-radius:100px;font-size:16px;font-weight:600;color:var(--text-secondary);">💬 Comment</span>
-                            <span style="background:var(--bg);border:1px solid var(--border);padding:6px 14px;border-radius:100px;font-size:16px;font-weight:600;color:var(--text-secondary);">↪️ Share</span>
-                            <span style="background:var(--bg);border:1px solid var(--border);padding:6px 14px;border-radius:100px;font-size:16px;font-weight:600;color:var(--text-secondary);">⏭️ Skip</span>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;padding:8px 0;">
+                            <span style="background:white;border:1px solid var(--border);padding:8px 16px;border-radius:100px;font-size:15px;font-weight:700;color:var(--text-primary);box-shadow:0 4px 12px rgba(0,0,0,0.04);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateY(-2px)';this.style.borderColor='#FF0050';this.style.boxShadow='0 8px 16px rgba(255,0,80,0.1)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.04)'"><span style="margin-right:6px;">👀</span> Konten ditonton</span>
+                            <span style="background:white;border:1px solid var(--border);padding:8px 16px;border-radius:100px;font-size:15px;font-weight:700;color:var(--text-primary);box-shadow:0 4px 12px rgba(0,0,0,0.04);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateY(-2px)';this.style.borderColor='#00F2FE';this.style.boxShadow='0 8px 16px rgba(0,242,254,0.1)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.04)'"><span style="margin-right:6px;">⏱️</span> Durasi menonton</span>
+                            <span style="background:white;border:1px solid var(--border);padding:8px 16px;border-radius:100px;font-size:15px;font-weight:700;color:var(--text-primary);box-shadow:0 4px 12px rgba(0,0,0,0.04);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateY(-2px)';this.style.borderColor='#FF0050';this.style.boxShadow='0 8px 16px rgba(255,0,80,0.1)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.04)'"><span style="margin-right:6px;">❤️</span> Like</span>
+                            <span style="background:white;border:1px solid var(--border);padding:8px 16px;border-radius:100px;font-size:15px;font-weight:700;color:var(--text-primary);box-shadow:0 4px 12px rgba(0,0,0,0.04);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateY(-2px)';this.style.borderColor='#00F2FE';this.style.boxShadow='0 8px 16px rgba(0,242,254,0.1)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.04)'"><span style="margin-right:6px;">💬</span> Comment</span>
+                            <span style="background:white;border:1px solid var(--border);padding:8px 16px;border-radius:100px;font-size:15px;font-weight:700;color:var(--text-primary);box-shadow:0 4px 12px rgba(0,0,0,0.04);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateY(-2px)';this.style.borderColor='#FF0050';this.style.boxShadow='0 8px 16px rgba(255,0,80,0.1)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.04)'"><span style="margin-right:6px;">↪️</span> Share</span>
                         </div>
 
-                        <div style="background:var(--bg);border-left:4px solid #FF0050;padding:16px 24px;border-radius:0 16px 16px 0;margin-top:8px;">
-                            <div style="font-size:17px;font-weight:700;color:var(--text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">Contoh Kasus</div>
+                        <div style="background:linear-gradient(135deg,rgba(255,0,80,0.04),rgba(0,242,254,0.04));border:1px solid rgba(255,0,80,0.15);padding:24px 32px;border-radius:24px;box-shadow:0 12px 32px rgba(255,0,80,0.05), inset 0 0 0 1px rgba(255,255,255,0.8);backdrop-filter:blur(20px);position:relative;overflow:hidden;margin-top:8px;">
+                            <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom, #FF0050, #00F2FE);"></div>
+                            <div style="font-size:14px;font-weight:800;color:#FF0050;margin-bottom:12px;text-transform:uppercase;letter-spacing:1.5px;display:flex;align-items:center;gap:8px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Contoh Kasus
+                            </div>
                             <div style="font-size:19px;color:var(--text-primary);line-height:1.7;">
-                                Pada 2025, kamu sering menonton konten <strong style="color:var(--text-primary);">Clash of Champions S2</strong> di FYP.<br>
-                                Ketika S3 tayang pada 2026, sistem mengenali pola ketertarikanmu pada musim sebelumnya.
+                                Kamu sering menonton <strong style="color:var(--text-primary);background:rgba(255,0,80,0.08);padding:2px 8px;border-radius:6px;">Clash of Champions S2</strong> di FYP.<br>
+                                Ketika S3 tayang, sistem langsung mengenali ketertarikanmu pada musim sebelumnya.
                             </div>
                         </div>
 
@@ -1592,23 +1602,23 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         </p>
 
                         <!-- Pipeline -->
-                        <div style="margin-top:8px;display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);padding:14px 20px;border-radius:100px;width:fit-content;box-shadow:var(--shadow-sm);font-size:17px;">
-                            <span style="font-weight:600;color:var(--text-primary);">Riwayat interaksi</span>
-                            <span style="color:var(--border);">→</span>
-                            <span style="font-weight:600;color:var(--text-primary);">Pola minat</span>
-                            <span style="color:var(--border);">→</span>
-                            <span style="font-weight:600;color:var(--text-primary);">Prediksi ketertarikan</span>
-                            <span style="color:var(--border);">→</span>
-                            <span style="font-weight:700;color:#FF0050;">FYP</span>
+                        <div style="margin-top:20px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.85);border:1px solid rgba(255,0,80,0.2);padding:16px 24px;border-radius:100px;width:fit-content;box-shadow:0 12px 32px rgba(255,0,80,0.1), inset 0 0 0 1px rgba(255,255,255,0.9);backdrop-filter:blur(10px);font-size:16px;">
+                            <span style="font-weight:700;color:var(--text-primary);">Riwayat interaksi</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,0,80,0.4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            <span style="font-weight:700;color:var(--text-primary);">Pola minat</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,0,80,0.4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            <span style="font-weight:700;color:var(--text-primary);">Prediksi ketertarikan</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,0,80,0.4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            <span style="font-weight:900;background:linear-gradient(90deg, #00F2FE, #FF0050);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 8px rgba(255,0,80,0.3));">FYP</span>
                         </div>
                     </div>
 
                     <!-- Right: Visual -->
-                    <div style="display:flex;justify-content:center;align-items:center;position:relative;transform:scale(1.2);transform-origin:center;">
-                        <div style="position:absolute;width:100%;height:100%;background:radial-gradient(circle,rgba(255,0,80,0.08) 0%,transparent 60%);z-index:0;"></div>
+                    <div style="display:flex;justify-content:center;align-items:center;position:relative;transform-origin:center;padding-top:20px;">
+                        <div style="position:absolute;width:120%;height:120%;background:radial-gradient(circle,rgba(0,242,254,0.1) 0%,rgba(255,0,80,0.1) 60%,transparent 80%);z-index:0;animation:pulseGlow 4s infinite alternate;"></div>
 
                         <!-- Mockup -->
-                        <div style="width:300px;background:#000;border:12px solid #222;border-radius:40px;height:550px;box-shadow:0 24px 60px rgba(0,0,0,0.25);position:relative;z-index:1;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:24px 16px;background-image:linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);">
+                        <div style="width:320px;background:#000;border:12px solid #111;border-radius:40px;height:560px;box-shadow:0 24px 60px rgba(0,0,0,0.25);position:relative;z-index:1;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:24px 16px;background-image:linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);animation:floatPhone 6s ease-in-out infinite;">
 
                             <!-- Header -->
                             <div style="display:flex;justify-content:center;gap:16px;color:white;font-weight:600;font-size:15px;opacity:0.9;">
@@ -1796,9 +1806,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                     <!-- LEFT: Explanation -->
                     <div style="display:flex;flex-direction:column;gap:22px;">
                         <!-- Eyebrow -->
-                        <div style="display:flex;align-items:center;gap:10px;">
-                            <div style="width:36px;height:36px;border-radius:10px;background:rgba(66,133,244,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;">📅</div>
-                            <span style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#4285F4;">Alasan 1 dari 3</span>
+                        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                            <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,rgba(66,133,244,0.15),rgba(66,133,244,0.05));border:1px solid rgba(66,133,244,0.3);display:flex;align-items:center;justify-content:center;color:#4285F4;box-shadow:0 4px 12px rgba(66,133,244,0.15), inset 0 0 0 1px rgba(255,255,255,0.8);backdrop-filter:blur(10px);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
+                            </div>
+                            <span style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#4285F4;">Alasan 1 dari 3</span>
                         </div>
 
                         <h2 style="font-family:var(--font-display);font-size:54px;font-weight:900;letter-spacing:-1.5px;line-height:1.1;color:var(--text-primary);margin:0;">
@@ -1810,8 +1822,10 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         </p>
 
                         <!-- Example box -->
-                        <div style="background:var(--bg);border-left:4px solid #4285F4;padding:18px 22px;border-radius:0 16px 16px 0;">
-                            <div style="font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Contoh Kasus</div>
+                        <div style="background:linear-gradient(90deg, rgba(66,133,244,0.05) 0%, rgba(66,133,244,0) 100%);border-left:4px solid #4285F4;padding:18px 22px;border-radius:0 16px 16px 0;transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(8px)';this.style.background='linear-gradient(90deg, rgba(66,133,244,0.1) 0%, rgba(66,133,244,0.02) 100%)'" onmouseleave="this.style.transform='';this.style.background='linear-gradient(90deg, rgba(66,133,244,0.05) 0%, rgba(66,133,244,0) 100%)'">
+                            <div style="font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#4285F4;margin-bottom:10px;display:flex;align-items:center;gap:6px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> CONTOH KASUS
+                            </div>
                             <p style="font-size:17px;color:var(--text-primary);line-height:1.65;margin:0;">
                                 Misalnya AI memiliki pengetahuan sampai tahun 2025. Jika kita bertanya:<br>
                                 <em style="color:#4285F4;font-style:normal;font-weight:700;">"Siapa pemenang Piala Dunia 2026?"</em><br>
@@ -1893,9 +1907,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
 
                     <!-- LEFT: Explanation -->
                     <div style="display:flex;flex-direction:column;gap:22px;">
-                        <div style="display:flex;align-items:center;gap:10px;">
-                            <div style="width:36px;height:36px;border-radius:10px;background:rgba(251,188,4,0.15);display:flex;align-items:center;justify-content:center;font-size:18px;">&#9878;&#65039;</div>
-                            <span style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FBBC04;">Alasan 2 dari 3</span>
+                        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                            <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,rgba(251,188,4,0.15),rgba(251,188,4,0.05));border:1px solid rgba(251,188,4,0.3);display:flex;align-items:center;justify-content:center;color:#FBBC04;box-shadow:0 4px 12px rgba(251,188,4,0.15), inset 0 0 0 1px rgba(255,255,255,0.8);backdrop-filter:blur(10px);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+                            </div>
+                            <span style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FBBC04;">Alasan 2 dari 3</span>
                         </div>
 
                         <h2 style="font-family:var(--font-display);font-size:54px;font-weight:900;letter-spacing:-1.5px;line-height:1.1;color:var(--text-primary);margin:0;">
@@ -1906,8 +1922,10 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             AI belajar dari data dan pola. Jika data yang digunakan lebih banyak merepresentasikan <strong style="color:var(--text-primary);">budaya, kelompok, atau perspektif tertentu</strong>, AI dapat menghasilkan jawaban yang kurang sesuai dengan konteks budaya lainnya.
                         </p>
 
-                        <div style="background:var(--bg);border-left:4px solid #FBBC04;padding:18px 22px;border-radius:0 16px 16px 0;">
-                            <div style="font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Contoh Kasus</div>
+                        <div style="background:linear-gradient(90deg, rgba(251,188,4,0.05) 0%, rgba(251,188,4,0) 100%);border-left:4px solid #FBBC04;padding:18px 22px;border-radius:0 16px 16px 0;transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(8px)';this.style.background='linear-gradient(90deg, rgba(251,188,4,0.1) 0%, rgba(251,188,4,0.02) 100%)'" onmouseleave="this.style.transform='';this.style.background='linear-gradient(90deg, rgba(251,188,4,0.05) 0%, rgba(251,188,4,0) 100%)'">
+                            <div style="font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#FBBC04;margin-bottom:10px;display:flex;align-items:center;gap:6px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> CONTOH KASUS
+                            </div>
                             <p style="font-size:17px;color:var(--text-primary);line-height:1.65;margin:0;">
                                 <em style="font-style:normal;font-weight:700;color:#FBBC04;">"Apakah memanggil dosen dengan nama langsung itu tidak sopan?"</em><br>
                                 AI yang lebih merepresentasikan konteks budaya Barat mungkin menjawab berbeda dibanding AI yang memahami budaya Indonesia — di mana memanggil <strong>"Bapak/Ibu"</strong> adalah norma kesopanan.
@@ -1983,9 +2001,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
 
                     <!-- LEFT: Explanation -->
                     <div style="display:flex;flex-direction:column;gap:22px;">
-                        <div style="display:flex;align-items:center;gap:10px;">
-                            <div style="width:36px;height:36px;border-radius:10px;background:rgba(234,67,53,0.1);display:flex;align-items:center;justify-content:center;font-size:18px;">&#127744;</div>
-                            <span style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#EA4335;">Alasan 3 dari 3</span>
+                        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                            <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,rgba(234,67,53,0.15),rgba(234,67,53,0.05));border:1px solid rgba(234,67,53,0.3);display:flex;align-items:center;justify-content:center;color:#EA4335;box-shadow:0 4px 12px rgba(234,67,53,0.15), inset 0 0 0 1px rgba(255,255,255,0.8);backdrop-filter:blur(10px);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-9 5 18 3-9h5"/></svg>
+                            </div>
+                            <span style="font-size:13px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#EA4335;">Alasan 3 dari 3</span>
                         </div>
 
                         <h2 style="font-family:var(--font-display);font-size:54px;font-weight:900;letter-spacing:-1.5px;line-height:1.1;color:var(--text-primary);margin:0;">
@@ -1996,8 +2016,10 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             AI dapat menghasilkan informasi yang terlihat <strong style="color:var(--text-primary);">meyakinkan tetapi sebenarnya salah</strong>, tidak akurat, atau bahkan tidak ada. Fenomena ini disebut <strong style="color:#EA4335;">AI hallucination</strong>.
                         </p>
 
-                        <div style="background:var(--bg);border-left:4px solid #EA4335;padding:18px 22px;border-radius:0 16px 16px 0;">
-                            <div style="font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Contoh Kasus</div>
+                        <div style="background:linear-gradient(90deg, rgba(234,67,53,0.05) 0%, rgba(234,67,53,0) 100%);border-left:4px solid #EA4335;padding:18px 22px;border-radius:0 16px 16px 0;transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(8px)';this.style.background='linear-gradient(90deg, rgba(234,67,53,0.1) 0%, rgba(234,67,53,0.02) 100%)'" onmouseleave="this.style.transform='';this.style.background='linear-gradient(90deg, rgba(234,67,53,0.05) 0%, rgba(234,67,53,0) 100%)'">
+                            <div style="font-size:12px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#EA4335;margin-bottom:10px;display:flex;align-items:center;gap:6px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> CONTOH KASUS
+                            </div>
                             <p style="font-size:17px;color:var(--text-primary);line-height:1.65;margin:0;">
                                 Kita bertanya ke AI: <em style="color:#EA4335;font-style:normal;font-weight:700;">"Jelaskan isi Pasal 28 Ayat 3 UU ITE terbaru."</em><br>
                                 AI menjawab dengan sangat meyakinkan — lengkap dengan nomor pasal, bunyi ayat, dan penjelasannya.<br>
