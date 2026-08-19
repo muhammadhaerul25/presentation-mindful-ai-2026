@@ -16570,6 +16570,131 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
         </section>
 
         <!-- ============================================================
+             SLIDE Q&A BOARD
+             ============================================================ -->
+        <section
+          class="slide"
+          id="slide-qa-board"
+          style="background: var(--surface)"
+        >
+          <div
+            class="slide-content"
+            style="
+              max-width: 1000px;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              padding: 40px 0;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                margin-bottom: 24px;
+              "
+            >
+              <div>
+                <div
+                  style="
+                    color: #fbbc04;
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <span
+                    style="
+                      display: inline-block;
+                      width: 6px;
+                      height: 6px;
+                      background: #fbbc04;
+                      border-radius: 50%;
+                      margin-right: 6px;
+                      margin-bottom: 2px;
+                    "
+                  ></span
+                  >INTERACTIVE
+                </div>
+                <h2
+                  style="
+                    font-size: 48px;
+                    font-weight: 900;
+                    color: var(--text);
+                    margin-bottom: 8px;
+                    font-family: var(--font-display);
+                  "
+                >
+                  Q&amp;A Live Board
+                </h2>
+                <p style="color: var(--text-muted); font-size: 16px">
+                  Daftar pertanyaan dari peserta via QR Code
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #e8f0fe;
+                  color: #1967d2;
+                  padding: 10px 20px;
+                  border-radius: 100px;
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  font-weight: 600;
+                  font-size: 16px;
+                  align-self: flex-end;
+                "
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+                <span id="qa-count">0 Pertanyaan</span>
+              </div>
+            </div>
+
+            <div
+              id="qa-list"
+              style="
+                flex: 1;
+                overflow-y: auto;
+                background: var(--surface);
+                border-radius: 16px;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                border: 1px solid #f0f0f0;
+              "
+            >
+              <!-- Loader -->
+              <div
+                id="qa-loader"
+                style="
+                  text-align: center;
+                  padding: 40px;
+                  color: var(--text-muted);
+                "
+              >
+                Memuat pertanyaan...
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================
            SLIDE 36 — CLOSING SLIDE (WHITE THEME QUOTE)
            ============================================================ -->
         <section
@@ -16953,6 +17078,66 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
           window.handleSlideJumpCallback(num);
         }
       }
+    </script>
+
+    <script>
+      async function fetchQuestions() {
+        try {
+          const response = await fetch("/api/get_questions");
+          const data = await response.json();
+
+          if (data.success) {
+            const list = document.getElementById("qa-list");
+            if (!list) return;
+
+            document.getElementById("qa-count").innerText =
+              `${data.data.length} Pertanyaan`;
+
+            if (data.data.length === 0) {
+              list.innerHTML =
+                '<div style="text-align: center; padding: 40px; color: var(--text-muted);">Belum ada pertanyaan.</div>';
+              return;
+            }
+
+            let newHtml = "";
+            data.data.forEach((q) => {
+              const date = new Date(q.created_at);
+              const timeStr = date
+                .toLocaleTimeString("id-ID", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })
+                .replace(":", ".");
+              const initials = q.nama.substring(0, 1).toUpperCase();
+
+              newHtml += `
+                  <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: #4285F4; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;">${initials}</div>
+                        <div style="font-weight: 700; color: var(--text); font-size: 16px;">${q.nama}</div>
+                      </div>
+                      <div style="color: var(--text-muted); font-size: 12px;">${timeStr}</div>
+                    </div>
+                    <div style="color: var(--text); font-size: 16px; line-height: 1.5;">${q.pertanyaan}</div>
+                  </div>
+                `;
+            });
+            list.innerHTML = newHtml;
+          }
+        } catch (error) {
+          console.error("Error fetching questions:", error);
+        }
+      }
+
+      // Fetch on load and every 5 seconds if slide is active
+      window.addEventListener("load", fetchQuestions);
+      setInterval(() => {
+        const slide = document.getElementById("slide-qa-board");
+        if (slide && slide.classList.contains("active")) {
+          fetchQuestions();
+        }
+      }, 5000);
     </script>
   </body>
 </html>
