@@ -8897,10 +8897,66 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
         <!-- ============================================================
            QR CODE SLIDE
            ============================================================ -->
-        <section class="slide" id="slide-qr" style="background: var(--bg)">
+        <section
+          class="slide"
+          id="slide-qr"
+          style="background: var(--bg); position: relative; overflow: hidden"
+        >
+          <!-- Premium Background Elements -->
+          <div
+            style="
+              position: absolute;
+              top: -20%;
+              left: -10%;
+              width: 50vmax;
+              height: 50vmax;
+              background: radial-gradient(
+                circle,
+                rgba(52, 168, 83, 0.15) 0%,
+                rgba(255, 255, 255, 0) 70%
+              );
+              filter: blur(60px);
+              z-index: 0;
+              pointer-events: none;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              bottom: -20%;
+              right: -10%;
+              width: 60vmax;
+              height: 60vmax;
+              background: radial-gradient(
+                circle,
+                rgba(13, 130, 70, 0.1) 0%,
+                rgba(255, 255, 255, 0) 70%
+              );
+              filter: blur(60px);
+              z-index: 0;
+              pointer-events: none;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              inset: 0;
+              background-image: radial-gradient(
+                rgba(52, 168, 83, 0.1) 1px,
+                transparent 1px
+              );
+              background-size: 32px 32px;
+              z-index: 0;
+              opacity: 0.5;
+              pointer-events: none;
+            "
+          ></div>
+
           <div
             class="slide-content"
             style="
+              position: relative;
+              z-index: 1;
               max-width: 800px;
               height: 100%;
               display: flex;
@@ -8913,7 +8969,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
           >
             <h2
               style="
-                font-size: 52px;
+                font-size: 56px;
                 font-weight: 900;
                 background: linear-gradient(135deg, #0d8246, #34a853);
                 -webkit-background-clip: text;
@@ -8922,76 +8978,90 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                 letter-spacing: -0.02em;
               "
             >
-              Save the QR Code
+              Q&amp;A Session
             </h2>
             <p
               style="
-                font-size: 20px;
+                font-size: 22px;
                 color: var(--text-muted);
                 line-height: 1.6;
                 font-weight: 500;
                 margin-bottom: 40px;
+                max-width: 600px;
               "
             >
-              Selama materi berlangsung,<br />jika ada pertanyaan silakan
-              langsung menuliskannya di form ini!
+              Punya pertanyaan seputar materi hari ini?<br />Silakan *scan* QR
+              code di bawah untuk menuliskannya.
             </p>
 
             <div
               style="
-                background: var(--surface);
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(24px);
+                -webkit-backdrop-filter: blur(24px);
                 padding: 16px 16px 32px 16px;
-                border-radius: 32px;
+                border-radius: 40px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
                 box-shadow:
-                  0 24px 48px rgba(0, 0, 0, 0.08),
-                  0 0 0 1px rgba(0, 0, 0, 0.03);
+                  0 32px 64px rgba(0, 0, 0, 0.08),
+                  0 0 0 1px rgba(0, 0, 0, 0.02) inset;
                 display: inline-flex;
                 flex-direction: column;
                 align-items: center;
                 transition:
-                  transform 0.3s ease,
-                  box-shadow 0.3s ease;
+                  transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                  box-shadow 0.4s ease;
               "
               onmouseover="
-                this.style.transform = 'translateY(-6px)';
+                this.style.transform = 'translateY(-12px) scale(1.02)';
                 this.style.boxShadow =
-                  '0 32px 64px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.03)';
+                  '0 40px 80px rgba(13,130,70,0.15), 0 0 0 1px rgba(255,255,255,0.8) inset';
               "
               onmouseout="
-                this.style.transform = 'translateY(0)';
+                this.style.transform = 'translateY(0) scale(1)';
                 this.style.boxShadow =
-                  '0 24px 48px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.03)';
+                  '0 32px 64px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.02) inset';
               "
             >
-              <img
-                src="assets/images/qr_form.png"
-                alt="QR Code Form Pertanyaan"
+              <div
                 style="
-                  width: 280px;
-                  height: 280px;
-                  display: block;
+                  background: white;
+                  border-radius: 28px;
+                  padding: 24px;
                   margin-bottom: 32px;
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
                 "
-              />
+              >
+                <img
+                  src="assets/images/qr_form.png"
+                  alt="QR Code Form Pertanyaan"
+                  style="
+                    width: 280px;
+                    height: 280px;
+                    display: block;
+                    mix-blend-mode: multiply;
+                  "
+                />
+              </div>
 
               <div
                 style="
                   background: linear-gradient(135deg, #e6f4ea, #cff0d9);
                   color: #0d8246;
-                  padding: 14px 32px;
+                  padding: 16px 36px;
                   border-radius: 100px;
                   display: inline-flex;
                   align-items: center;
-                  gap: 10px;
+                  gap: 12px;
                   font-weight: 800;
-                  font-size: 18px;
-                  box-shadow: 0 4px 12px rgba(52, 168, 83, 0.15);
+                  font-size: 20px;
+                  box-shadow: 0 8px 24px rgba(52, 168, 83, 0.2);
                   transition: all 0.3s ease;
                 "
               >
                 <svg
-                  width="22"
-                  height="22"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -8999,12 +9069,13 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path
-                    d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
-                  ></path>
+                  <path d="M4 7V4h3"></path>
+                  <path d="M4 17v3h3"></path>
+                  <path d="M20 7V4h-3"></path>
+                  <path d="M20 17v3h-3"></path>
+                  <rect x="7" y="7" width="10" height="10" rx="1"></rect>
                 </svg>
-                Scan Here!
+                Scan Here
               </div>
             </div>
           </div>
