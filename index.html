@@ -16575,87 +16575,142 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
         <section
           class="slide"
           id="slide-qa-board"
-          style="background: var(--surface)"
+          style="
+            background: var(--surface);
+            position: relative;
+            overflow: hidden;
+          "
         >
+          <!-- Premium Background Elements -->
+          <div
+            style="
+              position: absolute;
+              top: -20%;
+              left: -10%;
+              width: 50vmax;
+              height: 50vmax;
+              background: radial-gradient(
+                circle,
+                rgba(52, 168, 83, 0.1) 0%,
+                rgba(255, 255, 255, 0) 70%
+              );
+              filter: blur(60px);
+              z-index: 0;
+              pointer-events: none;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              bottom: -20%;
+              right: -10%;
+              width: 60vmax;
+              height: 60vmax;
+              background: radial-gradient(
+                circle,
+                rgba(13, 130, 70, 0.05) 0%,
+                rgba(255, 255, 255, 0) 70%
+              );
+              filter: blur(60px);
+              z-index: 0;
+              pointer-events: none;
+            "
+          ></div>
+
           <div
             class="slide-content"
             style="
-              max-width: 1000px;
+              max-width: 1200px;
+              width: 100%;
+              margin: 0 auto;
               height: 100%;
               display: flex;
               flex-direction: column;
-              padding: 40px 0;
+              padding: 60px 40px;
+              position: relative;
+              z-index: 1;
             "
           >
             <div
               style="
                 display: flex;
-                align-items: flex-start;
+                align-items: flex-end;
                 justify-content: space-between;
-                margin-bottom: 24px;
+                margin-bottom: 32px;
               "
             >
               <div>
                 <div
                   style="
-                    color: #fbbc04;
-                    font-weight: 700;
-                    font-size: 14px;
+                    color: #34a853;
+                    font-weight: 800;
+                    font-size: 16px;
                     text-transform: uppercase;
-                    letter-spacing: 1px;
-                    margin-bottom: 8px;
+                    letter-spacing: 1.5px;
+                    margin-bottom: 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
                   "
                 >
                   <span
                     style="
                       display: inline-block;
-                      width: 6px;
-                      height: 6px;
-                      background: #fbbc04;
+                      width: 8px;
+                      height: 8px;
+                      background: #34a853;
                       border-radius: 50%;
-                      margin-right: 6px;
-                      margin-bottom: 2px;
+                      box-shadow: 0 0 8px rgba(52, 168, 83, 0.5);
                     "
                   ></span
-                  >INTERACTIVE
+                  >LIVE INTERACTIVE
                 </div>
                 <h2
                   style="
-                    font-size: 48px;
+                    font-size: 56px;
                     font-weight: 900;
-                    color: var(--text);
+                    background: linear-gradient(135deg, #0d8246, #34a853);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                     margin-bottom: 8px;
                     font-family: var(--font-display);
+                    letter-spacing: -0.02em;
                   "
                 >
-                  Q&amp;A Live Board
+                  Q&amp;A Board
                 </h2>
-                <p style="color: var(--text-muted); font-size: 16px">
-                  Daftar pertanyaan dari peserta via QR Code
+                <p
+                  style="
+                    color: var(--text-muted);
+                    font-size: 20px;
+                    font-weight: 500;
+                  "
+                >
+                  Daftar pertanyaan yang masuk dari para peserta
                 </p>
               </div>
 
               <div
                 style="
-                  background: #e8f0fe;
-                  color: #1967d2;
-                  padding: 10px 20px;
+                  background: #e6f4ea;
+                  color: #0d8246;
+                  padding: 12px 24px;
                   border-radius: 100px;
                   display: inline-flex;
                   align-items: center;
-                  gap: 8px;
-                  font-weight: 600;
-                  font-size: 16px;
-                  align-self: flex-end;
+                  gap: 10px;
+                  font-weight: 700;
+                  font-size: 18px;
+                  box-shadow: 0 4px 16px rgba(52, 168, 83, 0.15);
                 "
               >
                 <svg
-                  width="20"
-                  height="20"
+                  width="22"
+                  height="22"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="2.5"
                 >
                   <path
                     d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
@@ -16670,25 +16725,31 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
               style="
                 flex: 1;
                 overflow-y: auto;
-                background: var(--surface);
-                border-radius: 16px;
-                padding: 16px;
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(20px);
+                border-radius: 24px;
+                border: 1px solid rgba(13, 130, 70, 0.1);
+                padding: 24px;
                 display: flex;
                 flex-direction: column;
-                gap: 12px;
-                border: 1px solid #f0f0f0;
+                gap: 16px;
+                box-shadow:
+                  0 16px 40px rgba(0, 0, 0, 0.04) inset,
+                  0 8px 24px rgba(0, 0, 0, 0.04);
               "
             >
-              <!-- Loader -->
+              <!-- Skeleton Loader -->
               <div
                 id="qa-loader"
                 style="
                   text-align: center;
-                  padding: 40px;
+                  padding: 60px;
                   color: var(--text-muted);
+                  font-size: 18px;
+                  font-weight: 500;
                 "
               >
-                Memuat pertanyaan...
+                Menarik data pertanyaan...
               </div>
             </div>
           </div>
