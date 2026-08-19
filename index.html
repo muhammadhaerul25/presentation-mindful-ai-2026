@@ -16572,7 +16572,33 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
         <!-- ============================================================
              SLIDE Q&A BOARD
              ============================================================ -->
-        <section
+        
+          <style>
+            #qa-list::-webkit-scrollbar {
+              width: 8px;
+            }
+            #qa-list::-webkit-scrollbar-track {
+              background: rgba(0, 0, 0, 0.02);
+              border-radius: 4px;
+            }
+            #qa-list::-webkit-scrollbar-thumb {
+              background: rgba(13, 130, 70, 0.2);
+              border-radius: 4px;
+            }
+            #qa-list::-webkit-scrollbar-thumb:hover {
+              background: rgba(13, 130, 70, 0.4);
+            }
+            
+            @keyframes pulse-shadow {
+              0% { box-shadow: 0 4px 12px rgba(52, 168, 83, 0.2); }
+              50% { box-shadow: 0 4px 24px rgba(52, 168, 83, 0.5); }
+              100% { box-shadow: 0 4px 12px rgba(52, 168, 83, 0.2); }
+            }
+            .qr-pulse {
+              animation: pulse-shadow 2s infinite ease-in-out;
+            }
+          </style>
+<section
           class="slide"
           id="slide-qa-board"
           style="background: var(--surface);"
@@ -16848,7 +16874,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                   0 8px 32px rgba(0, 0, 0, 0.08);
               "
             >
-              <div style="background: white; padding: 16px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+              <div style="background: white; padding: 16px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); qr-pulse">
                 <img 
                   src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://mindful-ai-2026.vercel.app/form-feedbacks" 
                   alt="QR Code" 
