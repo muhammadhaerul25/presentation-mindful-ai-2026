@@ -15,7 +15,8 @@
     />
     <style>
       :root {
-        --primary: #1a73e8;
+        --primary: #34a853;
+        --primary-dark: #0d8246;
         --error: #d93025;
         --bg: #f0f4f9;
         --surface: #ffffff;
@@ -66,11 +67,7 @@
         display: block;
         height: 10px;
         width: 100%;
-        background: linear-gradient(to right, 
-          #4285f4 0%, #4285f4 25%, 
-          #ea4335 25%, #ea4335 50%, 
-          #fbbc05 50%, #fbbc05 75%, 
-          #34a853 75%, #34a853 100%);
+        background: linear-gradient(to right, #0d8246, #34a853);
       }
 
       .content-padding {
@@ -172,11 +169,11 @@
       }
 
       .btn-submit:hover:not(:disabled) {
-        background: #1557b0;
+        background: var(--primary-dark);
       }
 
       .btn-submit:disabled {
-        background: #8ab4f8;
+        background: #94a3b8;
         cursor: not-allowed;
       }
 
@@ -274,7 +271,7 @@
           <p style="font-size: 15px; color: #5f6368; line-height: 1.6; margin-bottom: 32px;">
             Terima kasih atas pertanyaannya! Kami akan segera membahasnya.
           </p>
-          <button onclick="window.location.reload()" style="background: transparent; color: #1a73e8; border: none; font-weight: 600; font-size: 15px; cursor: pointer; padding: 8px 16px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background = '#f4f8fe';" onmouseout="this.style.background = 'transparent';">
+          <button onclick="window.location.reload()" style="background: transparent; color: #0d8246; border: none; font-weight: 600; font-size: 15px; cursor: pointer; padding: 8px 16px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background = '#e6f4ea';" onmouseout="this.style.background = 'transparent';">
             Kirim Pertanyaan Lain
           </button>
         </div>
