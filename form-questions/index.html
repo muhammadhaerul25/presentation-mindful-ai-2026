@@ -104,7 +104,8 @@
         margin-bottom: 24px;
       }
 
-      .form-group > label, .form-group .group-label {
+      .form-group > label,
+      .form-group .group-label {
         display: block;
         font-size: 14px;
         font-weight: 600;
@@ -112,7 +113,8 @@
         color: var(--text);
       }
 
-      .form-group > label.required::after, .form-group .group-label.required::after {
+      .form-group > label.required::after,
+      .form-group .group-label.required::after {
         content: " *";
         color: var(--error);
       }
@@ -188,13 +190,21 @@
       }
 
       @keyframes spin {
-        to { transform: rotate(360deg); }
+        to {
+          transform: rotate(360deg);
+        }
       }
 
       @media (max-width: 600px) {
-        body { padding: 20px 16px; }
-        .content-padding { padding: 32px 24px; }
-        .header h1 { font-size: 24px; }
+        body {
+          padding: 20px 16px;
+        }
+        .content-padding {
+          padding: 32px 24px;
+        }
+        .header h1 {
+          font-size: 24px;
+        }
       }
 
       .alert {
@@ -236,9 +246,12 @@
       <div class="content-padding">
         <div class="header">
           <h2>Form Pertanyaan</h2>
-          <h1>Materi Mindful AI: AI Personalization for Student Productivity</h1>
+          <h1>
+            Materi Mindful AI: AI Personalization for Student Productivity
+          </h1>
           <p>
-            Ada pertanyaan seputar presentasi hari ini? Silakan tuliskan di bawah ini.
+            Ada pertanyaan seputar presentasi hari ini? Silakan tuliskan di
+            bawah ini.
           </p>
         </div>
 
@@ -247,12 +260,23 @@
         <form id="questionForm">
           <div class="form-group">
             <label for="nama" class="required">Nama Lengkap</label>
-            <input type="text" id="nama" class="form-control" placeholder="Ketikkan nama Anda..." required />
+            <input
+              type="text"
+              id="nama"
+              class="form-control"
+              placeholder="Ketikkan nama Anda..."
+              required
+            />
           </div>
 
           <div class="form-group">
             <label for="pertanyaan" class="required">Pertanyaan</label>
-            <textarea id="pertanyaan" class="form-control" placeholder="Apa yang ingin Anda tanyakan?" required></textarea>
+            <textarea
+              id="pertanyaan"
+              class="form-control"
+              placeholder="Apa yang ingin Anda tanyakan?"
+              required
+            ></textarea>
           </div>
 
           <button type="submit" class="btn-submit" id="submitBtn">
@@ -263,15 +287,55 @@
 
         <div id="successState">
           <div class="success-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </div>
-          <h2 style="font-size: 24px; font-weight: 700; color: #202124; margin-bottom: 12px;">Terkirim!</h2>
-          <p style="font-size: 15px; color: #5f6368; line-height: 1.6; margin-bottom: 32px;">
+          <h2
+            style="
+              font-size: 24px;
+              font-weight: 700;
+              color: #202124;
+              margin-bottom: 12px;
+            "
+          >
+            Terkirim!
+          </h2>
+          <p
+            style="
+              font-size: 15px;
+              color: #5f6368;
+              line-height: 1.6;
+              margin-bottom: 32px;
+            "
+          >
             Terima kasih atas pertanyaannya! Kami akan segera membahasnya.
           </p>
-          <button onclick="window.location.reload()" style="background: transparent; color: #0d8246; border: none; font-weight: 600; font-size: 15px; cursor: pointer; padding: 8px 16px; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background = '#e6f4ea';" onmouseout="this.style.background = 'transparent';">
+          <button
+            onclick="window.location.reload()"
+            style="
+              background: transparent;
+              color: #0d8246;
+              border: none;
+              font-weight: 600;
+              font-size: 15px;
+              cursor: pointer;
+              padding: 8px 16px;
+              border-radius: 4px;
+              transition: background 0.2s;
+            "
+            onmouseover="this.style.background = '#e6f4ea'"
+            onmouseout="this.style.background = 'transparent'"
+          >
             Kirim Pertanyaan Lain
           </button>
         </div>
@@ -308,10 +372,11 @@
         alertBox.className = "alert";
 
         try {
-          const apiUrl = window.location.protocol === "file:" 
-            ? "https://mindful-ai-2026.vercel.app/api/submit_question" 
-            : "/api/submit_question";
-            
+          const apiUrl =
+            window.location.protocol === "file:"
+              ? "https://mindful-ai-2026.vercel.app/api/submit_question"
+              : "/api/submit_question";
+
           const response = await fetch(apiUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -319,8 +384,10 @@
           }).catch(() => ({ ok: true, json: async () => ({ success: true }) }));
 
           if (!response.ok && response.status !== 404) {
-             const result = await response.json().catch(() => ({}));
-             throw new Error(result.error || "Terjadi kesalahan saat submit data.");
+            const result = await response.json().catch(() => ({}));
+            throw new Error(
+              result.error || "Terjadi kesalahan saat submit data.",
+            );
           }
 
           form.style.display = "none";
@@ -330,14 +397,17 @@
           form.reset();
         } catch (error) {
           console.error(error);
-          if(error.message.includes("Failed to fetch") || error.message.includes("404")) {
-             form.style.display = "none";
-             document.querySelector(".header").style.display = "none";
-             alertBox.style.display = "none";
-             successState.style.display = "block";
-             form.reset();
+          if (
+            error.message.includes("Failed to fetch") ||
+            error.message.includes("404")
+          ) {
+            form.style.display = "none";
+            document.querySelector(".header").style.display = "none";
+            alertBox.style.display = "none";
+            successState.style.display = "block";
+            form.reset();
           } else {
-             showAlert(`Gagal menyimpan: ${error.message}`, "error");
+            showAlert(`Gagal menyimpan: ${error.message}`, "error");
           }
         } finally {
           submitBtn.disabled = false;

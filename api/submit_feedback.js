@@ -1,37 +1,43 @@
-const { Pool } = require('pg');
+const { Pool } = require("pg");
 
 // Vercel Serverless Function
 export default async function handler(req, res) {
-
   // Set CORS headers
-  const origin = req.headers.origin || '*';
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Origin', origin);
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
+  const origin = req.headers.origin || "*";
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Origin", origin);
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+  );
 
-  if (req.method === 'OPTIONS') {
+  if (req.method === "OPTIONS") {
     res.status(200).end();
     return;
   }
 
   // Hanya terima POST method
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method Not Allowed" });
   }
 
   const { nama, email, rating, alasan, pesan } = req.body;
 
   if (!nama || !email || !rating || !alasan || !pesan) {
-    return res.status(400).json({ error: 'Semua kolom wajib diisi.' });
+    return res.status(400).json({ error: "Semua kolom wajib diisi." });
   }
 
   // Gunakan connection string yang diberikan
-  const connectionString = 'postgresql://postgres.xtcfptlwbzgrdxpfkcux:muhammadhaerul2512@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres';
+  const connectionString =
+    "postgresql://postgres.xtcfptlwbzgrdxpfkcux:muhammadhaerul2512@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres";
 
   const pool = new Pool({
     connectionString,
-    ssl: { rejectUnauthorized: false }
+    ssl: { rejectUnauthorized: false },
   });
 
   try {
@@ -46,14 +52,19 @@ export default async function handler(req, res) {
     const result = await pool.query(query, values);
 
     // Kirim respons sukses
-    res.status(200).json({ 
-      success: true, 
-      message: 'Feedback berhasil disimpan.',
-      data: result.rows[0]
+    res.status(200).json({
+      success: true,
+      message: "Feedback berhasil disimpan.",
+      data: result.rows[0],
     });
   } catch (error) {
-    console.error('Database connection error:', error);
-    res.status(500).json({ error: 'Gagal menyimpan feedback ke database.', detail: error.message });
+    console.error("Database connection error:", error);
+    res
+      .status(500)
+      .json({
+        error: "Gagal menyimpan feedback ke database.",
+        detail: error.message,
+      });
   } finally {
     // Selalu tutup pool di serverless function agar tidak open connection terbuang
     await pool.end();
