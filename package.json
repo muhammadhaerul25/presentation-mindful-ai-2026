@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/muhammadhaerul25/presentation-mindful-ai-2026#readme",
   "dependencies": {
+    "jsdom": "^30.0.1",
     "pg": "^8.23.0"
   }
 }
