@@ -16,13 +16,14 @@
     <style>
       :root {
         --primary: #34a853;
+        --primary-dark: #0d8246;
         --success: #34a853;
         --error: #ea4335;
-        --bg: #f0f4f8;
-        --surface: #ffffff;
-        --text: #1a1a1a;
-        --text-muted: #5f6368;
-        --border: #e0e0e0;
+        --bg: #0f172a; /* Dark sleek background for the premium feel */
+        --surface: rgba(255, 255, 255, 0.95);
+        --text: #1e293b;
+        --text-muted: #64748b;
+        --border: #e2e8f0;
       }
 
       * {
@@ -44,14 +45,14 @@
         background-color: var(--bg);
         background-image:
           radial-gradient(
-            at 0% 0%,
-            hsla(217, 100%, 76%, 0.15) 0px,
-            transparent 50%
+            circle at 15% 50%,
+            rgba(52, 168, 83, 0.15),
+            transparent 25%
           ),
           radial-gradient(
-            at 100% 100%,
-            hsla(354, 82%, 73%, 0.15) 0px,
-            transparent 50%
+            circle at 85% 30%,
+            rgba(13, 130, 70, 0.15),
+            transparent 25%
           );
         color: var(--text);
         min-height: 100vh;
@@ -59,52 +60,115 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
-      }
-
-      .container {
-        background: var(--surface);
-        max-width: 500px;
-        width: 100%;
-        border-radius: 28px;
-        padding: 40px;
-        box-shadow:
-          0 10px 40px rgba(0, 0, 0, 0.08),
-          0 1px 3px rgba(0, 0, 0, 0.05);
         position: relative;
         overflow: hidden;
       }
 
+      /* Animated background orbs */
+      body::before,
+      body::after {
+        content: "";
+        position: absolute;
+        width: 40vmax;
+        height: 40vmax;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          rgba(52, 168, 83, 0.2),
+          rgba(13, 130, 70, 0.2)
+        );
+        filter: blur(80px);
+        z-index: -1;
+        animation: float 10s infinite ease-in-out alternate;
+      }
+      body::before {
+        top: -10vmax;
+        left: -10vmax;
+      }
+      body::after {
+        bottom: -10vmax;
+        right: -10vmax;
+        animation-delay: -5s;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 130, 70, 0.2),
+          rgba(52, 168, 83, 0.2)
+        );
+      }
+
+      @keyframes float {
+        0% {
+          transform: translate(0, 0) scale(1);
+        }
+        100% {
+          transform: translate(5%, 5%) scale(1.1);
+        }
+      }
+
+      .container {
+        background: var(--surface);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        max-width: 520px;
+        width: 100%;
+        border-radius: 32px;
+        padding: 48px 40px;
+        box-shadow:
+          0 24px 48px rgba(0, 0, 0, 0.2),
+          0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        position: relative;
+        animation: scaleUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      @keyframes scaleUp {
+        0% {
+          opacity: 0;
+          transform: scale(0.95) translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+
       .header {
         text-align: center;
-        margin-bottom: 32px;
+        margin-bottom: 36px;
       }
 
       .header h1 {
-        font-size: 26px;
-        font-weight: 800;
+        font-size: 32px;
+        font-weight: 900;
         background: linear-gradient(135deg, #0d8246, #34a853);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 12px;
-        line-height: 1.3;
+        letter-spacing: -0.02em;
       }
 
       .header p {
-        font-size: 15px;
+        font-size: 16px;
         color: var(--text-muted);
-        line-height: 1.5;
+        line-height: 1.6;
+        font-weight: 500;
       }
 
       .form-group {
         margin-bottom: 24px;
+        position: relative;
       }
 
       .form-group > label {
         display: block;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 8px;
-        color: #3c4043;
+        color: #334155;
+        transition: color 0.3s ease;
+      }
+
+      .form-group:focus-within > label {
+        color: var(--primary-dark);
       }
 
       .form-group > label::after {
@@ -114,67 +178,85 @@
 
       .form-control {
         width: 100%;
-        padding: 14px 16px;
-        font-size: 15px;
+        padding: 16px 20px;
+        font-size: 16px;
         border: 2px solid var(--border);
-        border-radius: 12px;
-        transition: all 0.2s ease;
+        border-radius: 16px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         outline: none;
-        background: #fafafa;
+        background: #f8fafc;
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+      }
+
+      .form-control::placeholder {
+        color: #94a3b8;
+        font-weight: 400;
+      }
+
+      .form-control:hover {
+        background: #ffffff;
+        border-color: #cbd5e1;
       }
 
       .form-control:focus {
         border-color: var(--primary);
-        background: #fff;
-        box-shadow: 0 0 0 4px rgba(52, 168, 83, 0.1);
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(52, 168, 83, 0.15);
       }
 
       textarea.form-control {
         resize: vertical;
-        min-height: 120px;
+        min-height: 140px;
+        line-height: 1.5;
       }
 
       .btn-submit {
         width: 100%;
-        padding: 16px;
-        font-size: 16px;
+        padding: 18px;
+        font-size: 17px;
         font-weight: 700;
         color: #fff;
-        background-color: var(--primary);
+        background: linear-gradient(135deg, #0d8246, #34a853);
+        background-size: 200% auto;
         border: none;
-        border-radius: 12px;
+        border-radius: 16px;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 8px;
-        margin-top: 10px;
+        gap: 12px;
+        margin-top: 32px;
+        box-shadow: 0 10px 20px -10px rgba(13, 130, 70, 0.5);
       }
 
       .btn-submit:hover:not(:disabled) {
-        background-color: #0d8246;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(13, 130, 70, 0.25);
+        background-position: right center;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px -10px rgba(13, 130, 70, 0.6);
       }
 
       .btn-submit:active:not(:disabled) {
         transform: translateY(0);
+        box-shadow: 0 5px 10px -5px rgba(13, 130, 70, 0.5);
       }
 
       .btn-submit:disabled {
-        opacity: 0.7;
+        background: #94a3b8;
+        box-shadow: none;
         cursor: not-allowed;
+        transform: none;
       }
 
       /* Loading Spinner */
       .spinner {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
         border: 3px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         border-top-color: #fff;
-        animation: spin 1s ease-in-out infinite;
+        animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
         display: none;
       }
 
@@ -186,40 +268,35 @@
 
       @media (max-width: 480px) {
         .container {
-          padding: 30px 20px;
-          border-radius: 20px;
+          padding: 32px 24px;
+          border-radius: 24px;
         }
         .header h1 {
-          font-size: 22px;
+          font-size: 28px;
         }
       }
 
       /* Success & Alert states */
       .alert {
-        padding: 14px 16px;
-        border-radius: 12px;
-        font-size: 14px;
-        font-weight: 500;
+        padding: 16px 20px;
+        border-radius: 16px;
+        font-size: 15px;
+        font-weight: 600;
         margin-bottom: 24px;
         display: none;
+        animation: fadeIn 0.4s ease;
       }
       .alert.error {
-        background: #fce8e6;
-        color: #d93025;
+        background: #fef2f2;
+        color: #dc2626;
+        border: 1px solid #fca5a5;
         display: block;
       }
 
-      #successState {
-        display: none;
-        text-align: center;
-        padding: 20px 0;
-        animation: slideInUp 0.5s ease;
-      }
-
-      @keyframes slideInUp {
+      @keyframes fadeIn {
         from {
           opacity: 0;
-          transform: translateY(20px);
+          transform: translateY(-10px);
         }
         to {
           opacity: 1;
@@ -227,53 +304,101 @@
         }
       }
 
+      #successState {
+        display: none;
+        text-align: center;
+        padding: 30px 0 10px;
+        animation: scaleUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
       .success-icon {
-        width: 80px;
-        height: 80px;
-        background: #e6f4ea;
+        width: 90px;
+        height: 90px;
+        background: linear-gradient(135deg, #dcfce7, #bbf7d0);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 24px;
-        color: #34a853;
+        margin: 0 auto 32px;
+        color: #16a34a;
+        box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.2);
+        animation: popIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      @keyframes popIn {
+        0% {
+          transform: scale(0) rotate(-45deg);
+        }
+        70% {
+          transform: scale(1.1) rotate(10deg);
+        }
+        100% {
+          transform: scale(1) rotate(0);
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>Form Pertanyaan<br />Mindful AI 2026</h1>
+        <h1>Mindful AI 2026</h1>
         <p>
-          Silakan tuliskan pertanyaan Anda terkait materi presentasi hari ini.
+          Ada pertanyaan seputar presentasi hari ini? Silakan tuliskan di bawah
+          ini.
         </p>
       </div>
 
       <div id="alertBox" class="alert"></div>
 
       <form id="questionForm">
-        <div class="form-group">
-          <label for="nama">Nama</label>
+        <div
+          class="form-group"
+          style="
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+            transform: translateY(10px);
+            animation-delay: 0.1s;
+          "
+        >
+          <label for="nama">Nama Lengkap</label>
           <input
             type="text"
             id="nama"
             class="form-control"
-            placeholder="Contoh: Budi Santoso"
+            placeholder="Ketikkan nama Anda..."
             required
           />
         </div>
 
-        <div class="form-group">
-          <label for="pertanyaan">Tuliskan pertanyaan Anda</label>
+        <div
+          class="form-group"
+          style="
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+            transform: translateY(10px);
+            animation-delay: 0.2s;
+          "
+        >
+          <label for="pertanyaan">Pertanyaan</label>
           <textarea
             id="pertanyaan"
             class="form-control"
-            placeholder="Tuliskan pertanyaan Anda di sini..."
+            placeholder="Apa yang ingin Anda tanyakan?"
             required
           ></textarea>
         </div>
 
-        <button type="submit" class="btn-submit" id="submitBtn">
+        <button
+          type="submit"
+          class="btn-submit"
+          id="submitBtn"
+          style="
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+            transform: translateY(10px);
+            animation-delay: 0.3s;
+          "
+        >
           <span id="submitText">Kirim Pertanyaan</span>
           <div class="spinner" id="loadingSpinner"></div>
         </button>
@@ -282,8 +407,8 @@
       <div id="successState">
         <div class="success-icon">
           <svg
-            width="40"
-            height="40"
+            width="48"
+            height="48"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -296,37 +421,46 @@
         </div>
         <h2
           style="
-            font-size: 24px;
-            font-weight: 800;
-            color: #1a1a1a;
+            font-size: 28px;
+            font-weight: 900;
+            color: #0f172a;
             margin-bottom: 12px;
+            letter-spacing: -0.02em;
           "
         >
-          Pertanyaan Terkirim!
+          Terkirim!
         </h2>
         <p
           style="
-            font-size: 15px;
-            color: #5f6368;
-            line-height: 1.5;
-            margin-bottom: 24px;
+            font-size: 16px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            font-weight: 500;
           "
         >
-          Terima kasih atas pertanyaan Anda. Kami akan membahasnya pada sesi
-          tanya jawab.
+          Terima kasih atas pertanyaannya! Kami akan segera membahasnya.
         </p>
         <button
           onclick="resetForm()"
           style="
-            background: #f1f3f4;
-            color: #1a1a1a;
-            border: none;
-            padding: 12px 24px;
+            background: #f1f5f9;
+            color: #334155;
+            border: 2px solid transparent;
+            padding: 14px 28px;
             border-radius: 100px;
-            font-weight: 600;
-            font-size: 14px;
+            font-weight: 700;
+            font-size: 15px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s;
+          "
+          onmouseover="
+            this.style.background = '#e2e8f0';
+            this.style.color = '#0f172a';
+          "
+          onmouseout="
+            this.style.background = '#f1f5f9';
+            this.style.color = '#334155';
           "
         >
           Kirim Pertanyaan Lain
