@@ -850,17 +850,17 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;flex:1;align-content:center;align-items:center;justify-content:center;margin:0 auto;width:100%;">
             <!-- Card 1 -->
             <div class="image-card">
-                <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Siri\n(Image+Quota+Limit)" alt="Siri">
+                <img src="assets/siri.jpg" alt="Siri" style="object-fit: cover;">
                 <div class="card-title">AI-Assistant<br><span style="background:linear-gradient(90deg, #4facfe, #f093fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Siri</span></div>
             </div>
             <!-- Card 2 -->
             <div class="image-card">
-                <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Tesla+Autopilot\n(Image+Quota+Limit)" alt="Tesla">
+                <img src="assets/tesla.jpg" alt="Tesla" style="object-fit: cover;">
                 <div class="card-title">Self-Driving Car<br><span style="color:#E31937;">Tesla</span></div>
             </div>
             <!-- Card 3 -->
             <div class="image-card">
-                <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Boston+Dynamics\n(Image+Quota+Limit)" alt="Boston Dynamics">
+                <img src="assets/boston_dynamics.jpg" alt="Boston Dynamics" style="object-fit: cover;">
                 <div class="card-title">Robotika<br><span style="color:#FFCC00;">Boston Dynamics</span></div>
             </div>
         </div>
@@ -2108,13 +2108,24 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                 <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1000px;height:1000px;border-radius:50%;background:radial-gradient(circle,rgba(66,133,244,0.04) 0%,transparent 65%);pointer-events:none;"></div>
                 <div style="position:absolute;inset:0;background-image:radial-gradient(circle,var(--border) 1.5px,transparent 1.5px);background-size:44px 44px;opacity:0.2;pointer-events:none;"></div>
 
+                <!-- Add title here -->
+                <div style="position:absolute;top:40px;left:0;width:100%;text-align:center;z-index:10;animation:fadeDown 0.6s ease-out both;">
+                    <div style="display:inline-block;padding:8px 24px;background:rgba(52,168,83,0.1);border-radius:100px;color:#34A853;font-size:14px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:12px;border:1px solid rgba(52,168,83,0.2);">
+                        Chapter 1
+                    </div>
+                    <h2 style="font-family:var(--font-display);font-size:64px;font-weight:900;color:var(--text-primary);margin:0;letter-spacing:-0.03em;line-height:1.1;">
+                        Key <span style="background:linear-gradient(135deg, #34A853, #0D8246); -webkit-background-clip: text; -webkit-text-fill-color: transparent; padding-right: 4px;">Takeaway</span>
+                    </h2>
+                </div>
+
                 <!-- STEP 1: Better Prediction ≠ Guaranteed Correct & AI ≠ Magic -->
                 <div class="reveal-step">
                     <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;gap:40px;z-index:2;padding:0 var(--slide-pad-x);">
 
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;width:100%;max-width:1300px;">
                             <!-- Left: Better Prediction ≠ Guaranteed Correct -->
-                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:48px;box-shadow:var(--shadow-md);text-align:left;">
+                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:48px;box-shadow:var(--shadow-md);text-align:left;position:relative;overflow:hidden;">
+                                <div style="position:absolute;top:0;left:0;width:100%;height:6px;background:linear-gradient(90deg, #EA4335, #FBBC04);"></div>
                                 <div style="font-size:16px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:14px;">Prinsip 1</div>
                                 <h3 style="font-family:var(--font-display);font-size:38px;font-weight:900;color:var(--text-primary);margin-bottom:20px;line-height:1.2;">
                                     Prediksi Lebih Baik <br><span style="color:var(--text-muted);font-weight:300;">≠</span> <span style="background:linear-gradient(135deg,#EA4335,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Pasti Benar</span>
@@ -2126,7 +2137,8 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             </div>
 
                             <!-- Right: AI ≠ Magic -->
-                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:48px;box-shadow:var(--shadow-md);text-align:left;">
+                            <div style="background:white;border:1px solid var(--border);border-radius:24px;padding:48px;box-shadow:var(--shadow-md);text-align:left;position:relative;overflow:hidden;">
+                                <div style="position:absolute;top:0;left:0;width:100%;height:6px;background:linear-gradient(90deg, #9B72F7, #4285F4);"></div>
                                 <div style="font-size:16px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:14px;">Prinsip 2</div>
                                 <h3 style="font-family:var(--font-display);font-size:38px;font-weight:900;color:var(--text-primary);margin-bottom:20px;line-height:1.2;">
                                     AI <span style="color:var(--text-muted);font-weight:300;">≠</span> <span style="background:linear-gradient(135deg,#9B72F7,#4285F4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Sihir</span>
@@ -2147,11 +2159,20 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                 <!-- STEP 2: Use -> Evaluate -> Verify -->
                 <div class="reveal-step">
                     <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;gap:32px;z-index:2;padding:0 var(--slide-pad-x);">
-                        <p style="font-size:24px;color:var(--text-muted);line-height:1.6;max-width:800px;margin:0;">
-                            Karena itu, ketika menggunakan AI, kita tidak cukup hanya menggunakan AI. Kita juga perlu mampu <strong style="color:var(--text-primary);">menilai dan memverifikasi</strong> hasilnya.
+                        <p style="font-size:28px;font-weight:500;color:var(--text-primary);line-height:1.5;max-width:900px;margin:0;">
+                            Karena itu, ketika menggunakan AI, kita tidak cukup hanya menggunakan AI.<br>Kita juga perlu mampu <span style="background:linear-gradient(135deg, #4285F4, #34A853); -webkit-background-clip: text; -webkit-text-fill-color: transparent;font-weight:800;">menilai dan memverifikasi</span> hasilnya.
                         </p>
 
                         <div style="display:flex;flex-direction:column;gap:16px;width:100%;max-width:900px;">
+                            <!-- Bad flow -->
+                            <div style="background:rgba(234,67,53,0.03);border:1.5px solid rgba(234,67,53,0.15);border-radius:20px;padding:22px 32px;opacity:0.7;">
+                                <div style="font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#EA4335;margin-bottom:12px;">&#10005; Bukan sekadar</div>
+                                <div style="display:flex;align-items:center;justify-content:center;gap:16px;font-size:22px;font-weight:800;color:var(--text-muted);text-decoration:line-through;flex-wrap:wrap;">
+                                    <span>Use AI</span>
+                                    <span style="font-weight:300;text-decoration:none;">→</span>
+                                    <span>Trust AI</span>
+                                </div>
+                            </div>
                             <!-- Good flow -->
                             <div style="background:white;border:1.5px solid rgba(52,168,83,0.25);border-radius:20px;padding:22px 32px;box-shadow:var(--shadow-md);position:relative;overflow:hidden;">
                                 <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#4285F4,#34A853);"></div>
@@ -2162,15 +2183,6 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                                     <span style="background:rgba(52,168,83,0.1);color:#34A853;padding:8px 20px;border-radius:100px;">Evaluate AI</span>
                                     <span style="color:var(--text-muted);font-weight:300;">→</span>
                                     <span style="background:rgba(155,114,247,0.1);color:#9B72F7;padding:8px 20px;border-radius:100px;">Verify AI</span>
-                                </div>
-                            </div>
-                            <!-- Bad flow -->
-                            <div style="background:rgba(234,67,53,0.03);border:1.5px solid rgba(234,67,53,0.15);border-radius:20px;padding:22px 32px;opacity:0.7;">
-                                <div style="font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#EA4335;margin-bottom:12px;">&#10005; Bukan sekadar</div>
-                                <div style="display:flex;align-items:center;justify-content:center;gap:16px;font-size:22px;font-weight:800;color:var(--text-muted);text-decoration:line-through;flex-wrap:wrap;">
-                                    <span>Use AI</span>
-                                    <span style="font-weight:300;text-decoration:none;">→</span>
-                                    <span>Trust AI</span>
                                 </div>
                             </div>
                         </div>
@@ -2186,8 +2198,8 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
            ============================================================ -->
             <section class="slide" id="slide-chap2" style="background:var(--surface);">
                 <!-- Decorative orbs -->
-                <div style="position:absolute;top:-100px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(52,168,83,0.08) 0%,transparent 65%);pointer-events:none;"></div>
-                <div style="position:absolute;bottom:-80px;left:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(251,188,4,0.06) 0%,transparent 65%);pointer-events:none;"></div>
+                <div style="position:absolute;top:-100px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(52,168,83,0.08) 0%,transparent 65%);pointer-events:none;animation:pulseGlow 4s infinite alternate;"></div>
+                <div style="position:absolute;bottom:-80px;left:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(251,188,4,0.06) 0%,transparent 65%);pointer-events:none;animation:pulseGlow 5s infinite alternate-reverse;"></div>
                 <div style="position:absolute;inset:0;background-image:radial-gradient(circle,var(--border) 1.5px,transparent 1.5px);background-size:60px 60px;opacity:0.3;pointer-events:none;"></div>
 
                 <div class="slide-content" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;height:100%;padding:0 var(--slide-pad-x);z-index:2;gap:40px;">
@@ -2202,7 +2214,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             AI <span style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Personalization for Student Productivity</span>
                         </h1>
                         <p style="font-size:24px;color:var(--text-secondary);max-width:800px;margin:24px 0 0 0;line-height:1.6;">
-                            Memanfaatkan AI Multimodal dan Prompt Engineering untuk menunjang kebutuhan riset, belajar, dan manajemen waktu sehari-hari.
+                            Memanfaatkan AI Multimodal dan Prompt and Context Engineering untuk menunjang kebutuhan riset, belajar, dan manajemen waktu sehari-hari.
                         </p>
                     </div>
 
@@ -2212,7 +2224,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:450px;height:450px;background:radial-gradient(circle,rgba(251,188,4,0.08) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
                         
                         <!-- Topic 1 -->
-                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transform:translateX(0);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(-12px)';this.style.boxShadow='0 20px 48px rgba(66,133,244,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='translateX(0)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
+                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transition:all 0.3s ease;animation:fadeUp 0.6s ease-out both;animation-delay:0.2s;cursor:default;" onmouseenter="this.style.transform='translateX(-12px)';this.style.boxShadow='0 20px 48px rgba(66,133,244,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='none';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
                             <div style="width:60px;height:60px;background:linear-gradient(135deg,rgba(66,133,244,0.1),rgba(66,133,244,0.02));border-radius:18px;display:flex;align-items:center;justify-content:center;color:#4285F4;flex-shrink:0;">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                             </div>
@@ -2223,7 +2235,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         </div>
 
                         <!-- Topic 2 -->
-                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transform:translateX(40px);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(28px)';this.style.boxShadow='0 20px 48px rgba(52,168,83,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='translateX(40px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
+                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transition:all 0.3s ease;animation:fadeUp 0.6s ease-out both;animation-delay:0.4s;cursor:default;" onmouseenter="this.style.transform='translateX(-12px)';this.style.boxShadow='0 20px 48px rgba(52,168,83,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='none';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
                             <div style="width:60px;height:60px;background:linear-gradient(135deg,rgba(52,168,83,0.1),rgba(52,168,83,0.02));border-radius:18px;display:flex;align-items:center;justify-content:center;color:#34A853;flex-shrink:0;">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
                             </div>
@@ -2234,7 +2246,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         </div>
 
                         <!-- Topic 3 -->
-                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transform:translateX(80px);transition:all 0.3s ease;cursor:default;" onmouseenter="this.style.transform='translateX(68px)';this.style.boxShadow='0 20px 48px rgba(251,188,4,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='translateX(80px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
+                        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5);backdrop-filter:blur(20px);transition:all 0.3s ease;animation:fadeUp 0.6s ease-out both;animation-delay:0.6s;cursor:default;" onmouseenter="this.style.transform='translateX(-12px)';this.style.boxShadow='0 20px 48px rgba(251,188,4,0.08),inset 0 0 0 1px rgba(255,255,255,0.8)'" onmouseleave="this.style.transform='none';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.04),inset 0 0 0 1px rgba(255,255,255,0.5)'">
                             <div style="width:60px;height:60px;background:linear-gradient(135deg,rgba(251,188,4,0.1),rgba(251,188,4,0.02));border-radius:18px;display:flex;align-items:center;justify-content:center;color:#FBBC04;flex-shrink:0;">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                             </div>
@@ -2290,36 +2302,56 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
 
                         <!-- Logos Dock -->
                         <div style="display:flex;align-items:center;justify-content:center;gap:36px;margin:16px 0;padding:16px 36px;background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.9);border-radius:100px;box-shadow:0 12px 32px rgba(0,0,0,0.06), inset 0 0 0 1px rgba(255,255,255,1);backdrop-filter:blur(20px);animation:fadeUp 0.6s ease-out both;">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT Logo" style="height:42px;object-fit:contain;transition:transform 0.3s ease;cursor:pointer;" onmouseover="this.style.transform='scale(1.15) translateY(-4px)'" onmouseout="this.style.transform='none'">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Google_Gemini_icon_2025.svg/1280px-Google_Gemini_icon_2025.svg.png" alt="Gemini Logo" style="height:42px;object-fit:contain;transition:transform 0.3s ease;cursor:pointer;" onmouseover="this.style.transform='scale(1.15) translateY(-4px)'" onmouseout="this.style.transform='none'">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc2gUGevSVtEhJvLLsL2-CqDM-3l5LNzOZE6OQ7az8vQ&s=10" alt="Claude Logo" style="height:42px;border-radius:10px;object-fit:contain;transition:transform 0.3s ease;cursor:pointer;" onmouseover="this.style.transform='scale(1.15) translateY(-4px)'" onmouseout="this.style.transform='none'">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI8Aewdh8PY3qOGWEpfST5HijPiIuIW55j9LdsXdJJBw&s=10" alt="Copilot Logo" style="height:42px;border-radius:10px;object-fit:contain;transition:transform 0.3s ease;cursor:pointer;" onmouseover="this.style.transform='scale(1.15) translateY(-4px)'" onmouseout="this.style.transform='none'">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjgnGbkVN3vDHV8GV4Pp6UOjRnxEp-u_9Uk8E1qlSBeQ&s" alt="DeepSeek Logo" style="height:42px;border-radius:10px;object-fit:contain;transition:transform 0.3s ease;cursor:pointer;" onmouseover="this.style.transform='scale(1.15) translateY(-4px)'" onmouseout="this.style.transform='none'">
+                            
+                            <div style="position:relative;display:flex;flex-direction:column;align-items:center;cursor:pointer;" onmouseover="this.children[0].style.transform='scale(1.15) translateY(-4px)'; this.children[1].style.opacity='1'; this.children[1].style.transform='translateY(0)';" onmouseout="this.children[0].style.transform='none'; this.children[1].style.opacity='0'; this.children[1].style.transform='translateY(4px)';">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT Logo" style="height:42px;object-fit:contain;transition:transform 0.3s ease;">
+                                <div style="position:absolute;bottom:-28px;background:rgba(0,0,0,0.8);color:white;font-size:12px;font-weight:600;padding:4px 8px;border-radius:6px;opacity:0;transform:translateY(4px);transition:all 0.3s ease;pointer-events:none;white-space:nowrap;">ChatGPT</div>
+                            </div>
+                            
+                            <div style="position:relative;display:flex;flex-direction:column;align-items:center;cursor:pointer;" onmouseover="this.children[0].style.transform='scale(1.15) translateY(-4px)'; this.children[1].style.opacity='1'; this.children[1].style.transform='translateY(0)';" onmouseout="this.children[0].style.transform='none'; this.children[1].style.opacity='0'; this.children[1].style.transform='translateY(4px)';">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Google_Gemini_icon_2025.svg/1280px-Google_Gemini_icon_2025.svg.png" alt="Gemini Logo" style="height:42px;object-fit:contain;transition:transform 0.3s ease;">
+                                <div style="position:absolute;bottom:-28px;background:rgba(0,0,0,0.8);color:white;font-size:12px;font-weight:600;padding:4px 8px;border-radius:6px;opacity:0;transform:translateY(4px);transition:all 0.3s ease;pointer-events:none;white-space:nowrap;">Gemini</div>
+                            </div>
+                            
+                            <div style="position:relative;display:flex;flex-direction:column;align-items:center;cursor:pointer;" onmouseover="this.children[0].style.transform='scale(1.15) translateY(-4px)'; this.children[1].style.opacity='1'; this.children[1].style.transform='translateY(0)';" onmouseout="this.children[0].style.transform='none'; this.children[1].style.opacity='0'; this.children[1].style.transform='translateY(4px)';">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc2gUGevSVtEhJvLLsL2-CqDM-3l5LNzOZE6OQ7az8vQ&s=10" alt="Claude Logo" style="height:42px;border-radius:10px;object-fit:contain;transition:transform 0.3s ease;">
+                                <div style="position:absolute;bottom:-28px;background:rgba(0,0,0,0.8);color:white;font-size:12px;font-weight:600;padding:4px 8px;border-radius:6px;opacity:0;transform:translateY(4px);transition:all 0.3s ease;pointer-events:none;white-space:nowrap;">Claude</div>
+                            </div>
+                            
+                            <div style="position:relative;display:flex;flex-direction:column;align-items:center;cursor:pointer;" onmouseover="this.children[0].style.transform='scale(1.15) translateY(-4px)'; this.children[1].style.opacity='1'; this.children[1].style.transform='translateY(0)';" onmouseout="this.children[0].style.transform='none'; this.children[1].style.opacity='0'; this.children[1].style.transform='translateY(4px)';">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI8Aewdh8PY3qOGWEpfST5HijPiIuIW55j9LdsXdJJBw&s=10" alt="Copilot Logo" style="height:42px;border-radius:10px;object-fit:contain;transition:transform 0.3s ease;">
+                                <div style="position:absolute;bottom:-28px;background:rgba(0,0,0,0.8);color:white;font-size:12px;font-weight:600;padding:4px 8px;border-radius:6px;opacity:0;transform:translateY(4px);transition:all 0.3s ease;pointer-events:none;white-space:nowrap;">Copilot</div>
+                            </div>
+                            
+                            <div style="position:relative;display:flex;flex-direction:column;align-items:center;cursor:pointer;" onmouseover="this.children[0].style.transform='scale(1.15) translateY(-4px)'; this.children[1].style.opacity='1'; this.children[1].style.transform='translateY(0)';" onmouseout="this.children[0].style.transform='none'; this.children[1].style.opacity='0'; this.children[1].style.transform='translateY(4px)';">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjgnGbkVN3vDHV8GV4Pp6UOjRnxEp-u_9Uk8E1qlSBeQ&s" alt="DeepSeek Logo" style="height:42px;border-radius:10px;object-fit:contain;transition:transform 0.3s ease;">
+                                <div style="position:absolute;bottom:-28px;background:rgba(0,0,0,0.8);color:white;font-size:12px;font-weight:600;padding:4px 8px;border-radius:6px;opacity:0;transform:translateY(4px);transition:all 0.3s ease;pointer-events:none;white-space:nowrap;">DeepSeek</div>
+                            </div>
                         </div>
 
                         <!-- Bottom: Capabilities Grid -->
                         <div style="width:100%;max-width:1100px;">
                             <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;width:100%;">
                                 <!-- Row 1 -->
-                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.1s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(66,133,244,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.1s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(66,133,244,0.3)';this.style.background='rgba(66,133,244,0.04)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)';this.style.background='white'">
                                     <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(66,133,244,0.15),rgba(66,133,244,0.05));border:1px solid rgba(66,133,244,0.2);display:flex;align-items:center;justify-content:center;color:#4285F4;flex-shrink:0;">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                     </div>
                                     <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Chat &amp; Brainstorm</span>
                                 </div>
-                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.15s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.15s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(52,168,83,0.3)';this.style.background='rgba(52,168,83,0.04)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)';this.style.background='white'">
                                     <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(52,168,83,0.15),rgba(52,168,83,0.05));border:1px solid rgba(52,168,83,0.2);display:flex;align-items:center;justify-content:center;color:#34A853;flex-shrink:0;">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                                     </div>
                                     <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Web Research</span>
                                 </div>
-                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(251,188,4,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(251,188,4,0.3)';this.style.background='rgba(251,188,4,0.04)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)';this.style.background='white'">
                                     <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(251,188,4,0.15),rgba(251,188,4,0.05));border:1px solid rgba(251,188,4,0.2);display:flex;align-items:center;justify-content:center;color:#FBBC04;flex-shrink:0;">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
                                     </div>
                                     <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Analisis Dokumen</span>
                                 </div>
-                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(234,67,53,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(234,67,53,0.3)';this.style.background='rgba(234,67,53,0.04)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)';this.style.background='white'">
                                     <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(234,67,53,0.15),rgba(234,67,53,0.05));border:1px solid rgba(234,67,53,0.2);display:flex;align-items:center;justify-content:center;color:#EA4335;flex-shrink:0;">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
                                     </div>
@@ -2327,13 +2359,13 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                                 </div>
 
                                 <!-- Row 2 -->
-                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(155,114,247,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(155,114,247,0.3)';this.style.background='rgba(155,114,247,0.04)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)';this.style.background='white'">
                                     <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(155,114,247,0.15),rgba(155,114,247,0.05));border:1px solid rgba(155,114,247,0.2);display:flex;align-items:center;justify-content:center;color:#9B72F7;flex-shrink:0;">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
                                     </div>
                                     <span style="font-weight:700;color:var(--text-primary);font-size:15px;line-height:1.2;text-align:left;">Analisis Data</span>
                                 </div>
-                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.35s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(33,150,243,0.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)'">
+                                <div style="background:white;padding:16px 20px;border-radius:20px;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:16px;box-shadow:var(--shadow-sm);transition:all 0.3s ease;animation:fadeUp 0.5s ease-out both;animation-delay:0.35s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)';this.style.borderColor='rgba(33,150,243,0.3)';this.style.background='rgba(33,150,243,0.04)'" onmouseout="this.style.transform='none';this.style.boxShadow='var(--shadow-sm)';this.style.borderColor='rgba(0,0,0,0.06)';this.style.background='white'">
                                     <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(33,150,243,0.15),rgba(33,150,243,0.05));border:1px solid rgba(33,150,243,0.2);display:flex;align-items:center;justify-content:center;color:#2196F3;flex-shrink:0;">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                                     </div>
@@ -2446,11 +2478,8 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                                 <div style="position:absolute;top:-50%;right:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(251,188,4,0.15) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
                                 <div style="position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(52,168,83,0.15) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
 
-                                <div style="display:flex;align-items:center;justify-content:center;gap:24px;position:relative;z-index:2;">
-                                    <div style="width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,rgba(52,168,83,0.2),rgba(52,168,83,0.05));border:1px solid rgba(52,168,83,0.4);display:flex;align-items:center;justify-content:center;color:#34A853;flex-shrink:0;box-shadow:0 8px 24px rgba(52,168,83,0.2);">
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
-                                    </div>
-                                    <h2 style="font-family:var(--font-display);font-size:48px;font-weight:800;color:var(--text-primary);line-height:1.25;margin:0;letter-spacing:-0.5px;text-align:left;">
+                                <div style="display:flex;align-items:center;justify-content:center;position:relative;z-index:2;">
+                                    <h2 style="font-family:var(--font-display);font-size:48px;font-weight:800;color:var(--text-primary);line-height:1.25;margin:0;letter-spacing:-0.5px;text-align:center;">
                                         “AI mana yang <strong style="background:linear-gradient(135deg,#34A853,#FBBC04);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">paling cocok untuk pekerjaan</strong> yang sedang saya lakukan?”
                                     </h2>
                                 </div>
@@ -2476,7 +2505,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                     <div style="display:flex; flex-direction:column; gap:8px; width:100%; max-width:1400px; margin:0 auto; background:white; border:1px solid var(--border); border-radius:24px; padding:16px 24px; box-shadow:0 10px 40px rgba(0,0,0,0.04);">
 
                         <!-- Headers -->
-                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px; border-bottom:2px solid var(--border); align-items:center;">
+                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px 24px; background:rgba(0,0,0,0.02); border-radius:12px 12px 0 0; border-bottom:2px solid var(--border); align-items:center;">
                             <div style="font-weight:700; color:var(--text-muted); font-size:13px; text-transform:uppercase; letter-spacing:1px; display:flex; align-items:center; gap:8px;">AI Platform</div>
                             <div style="font-weight:700; color:var(--text-muted); font-size:13px; text-transform:uppercase; letter-spacing:1px; display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Core Specialty</div>
                             <div style="font-weight:700; color:var(--text-muted); font-size:13px; text-transform:uppercase; letter-spacing:1px; display:flex; align-items:center; gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg> Best At</div>
@@ -2485,7 +2514,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         </div>
 
                         <!-- ChatGPT -->
-                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px; border-bottom:1px solid #f0f0f0; border-radius:12px; transition:all 0.3s ease; cursor:default;" onmouseover="this.style.background='rgba(16,163,127,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(16,163,127,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='#f0f0f0'" style="border:1px solid transparent;">
+                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px 24px; border-bottom:1px solid #f0f0f0; border-radius:12px; transition:all 0.3s ease; animation:fadeUp 0.5s ease-out both; animation-delay:0.1s; cursor:default;" onmouseover="this.style.background='rgba(16,163,127,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(16,163,127,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='#f0f0f0'" style="border:1px solid transparent;">
                             <div style="display:flex; align-items:center; gap:12px; font-weight:700; font-size:18px; color:var(--text-primary);">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" style="width:32px; height:32px; object-fit:contain;">
                                 ChatGPT
@@ -2493,11 +2522,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             <div style="display:flex; align-items:center;"><span style="background:rgba(16,163,127,0.1);color:#10a37f;padding:6px 12px;border-radius:100px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(16,163,127,0.2);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m8 10 4-4 4 4"/><path d="m12 6v10"/></svg> Creative & Versatile</span></div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Gaya penulisan natural, ideasi kreatif, percakapan suara (voice mode), dan instruksi umum</div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Sering berhalusinasi dengan gaya yang sangat meyakinkan</div>
-                            <div style="font-size:14px; font-weight:600; color:var(--text-primary); line-height:1.5;">Asisten virtual serbaguna, brainstorming kreatif, dan drafting teks awal</div>
+                            <div style="font-size:14px; font-weight:600; color:#10a37f; line-height:1.5;">Asisten virtual serbaguna, brainstorming kreatif, dan drafting teks awal</div>
                         </div>
 
                         <!-- Gemini -->
-                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px; border-bottom:1px solid #f0f0f0; border-radius:12px; transition:all 0.3s ease; cursor:default;" onmouseover="this.style.background='rgba(66,133,244,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(66,133,244,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='#f0f0f0'" style="border:1px solid transparent;">
+                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px 24px; border-bottom:1px solid #f0f0f0; border-radius:12px; transition:all 0.3s ease; animation:fadeUp 0.5s ease-out both; animation-delay:0.2s; cursor:default;" onmouseover="this.style.background='rgba(66,133,244,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(66,133,244,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='#f0f0f0'" style="border:1px solid transparent;">
                             <div style="display:flex; align-items:center; gap:12px; font-weight:700; font-size:18px; color:var(--text-primary);">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Google_Gemini_icon_2025.svg/1280px-Google_Gemini_icon_2025.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Gemini" style="width:32px; height:32px; object-fit:contain;">
                                 Gemini
@@ -2505,11 +2534,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             <div style="display:flex; align-items:center;"><span style="background:rgba(66,133,244,0.1);color:#4285F4;padding:6px 12px;border-radius:100px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(66,133,244,0.2);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Research & Multimodal</span></div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Integrasi Google Workspace, riset web real-time, dan pemrosesan dokumen/video masif</div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Respons terkadang terlalu berhati-hati & inkonsisten antar update</div>
-                            <div style="font-size:14px; font-weight:600; color:var(--text-primary); line-height:1.5;">Riset data terkini, analisis video YouTube, dan merangkum PDF berukuran masif</div>
+                            <div style="font-size:14px; font-weight:600; color:#4285F4; line-height:1.5;">Riset data terkini, analisis video YouTube, dan merangkum PDF berukuran masif</div>
                         </div>
 
                         <!-- Claude -->
-                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px; border-bottom:1px solid #f0f0f0; border-radius:12px; transition:all 0.3s ease; cursor:default;" onmouseover="this.style.background='rgba(217,119,87,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(217,119,87,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='#f0f0f0'" style="border:1px solid transparent;">
+                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px 24px; border-bottom:1px solid #f0f0f0; border-radius:12px; transition:all 0.3s ease; animation:fadeUp 0.5s ease-out both; animation-delay:0.3s; cursor:default;" onmouseover="this.style.background='rgba(217,119,87,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(217,119,87,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='#f0f0f0'" style="border:1px solid transparent;">
                             <div style="display:flex; align-items:center; gap:12px; font-weight:700; font-size:18px; color:var(--text-primary);">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc2gUGevSVtEhJvLLsL2-CqDM-3l5LNzOZE6OQ7az8vQ&s=10" alt="Claude" style="width:32px; height:32px; object-fit:contain; border-radius:8px;">
                                 Claude
@@ -2517,11 +2546,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             <div style="display:flex; align-items:center;"><span style="background:rgba(217,119,87,0.1);color:#d97757;padding:6px 12px;border-radius:100px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(217,119,87,0.2);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Technical & Analytical</span></div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Coding tingkat lanjut, analisis dokumen super panjang, dan penulisan luwes bergaya manusia</div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Sering menolak prompt aman karena filter keamanan yang terlalu ketat</div>
-                            <div style="font-size:14px; font-weight:600; color:var(--text-primary); line-height:1.5;">Programming kompleks, refactoring kode, dan tugas menulis tingkat profesional</div>
+                            <div style="font-size:14px; font-weight:600; color:#d97757; line-height:1.5;">Programming kompleks, refactoring kode, dan tugas menulis tingkat profesional</div>
                         </div>
 
                         <!-- Copilot -->
-                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px; border-bottom:1px solid #f0f0f0; border-radius:12px; transition:all 0.3s ease; cursor:default;" onmouseover="this.style.background='rgba(0,120,212,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(0,120,212,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='#f0f0f0'" style="border:1px solid transparent;">
+                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px 24px; border-bottom:1px solid #f0f0f0; border-radius:12px; transition:all 0.3s ease; animation:fadeUp 0.5s ease-out both; animation-delay:0.4s; cursor:default;" onmouseover="this.style.background='rgba(0,120,212,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(0,120,212,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='#f0f0f0'" style="border:1px solid transparent;">
                             <div style="display:flex; align-items:center; gap:12px; font-weight:700; font-size:18px; color:var(--text-primary);">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI8Aewdh8PY3qOGWEpfST5HijPiIuIW55j9LdsXdJJBw&s=10" alt="Copilot" style="width:32px; height:32px; object-fit:contain; border-radius:8px;">
                                 Copilot
@@ -2529,11 +2558,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             <div style="display:flex; align-items:center;"><span style="background:rgba(0,120,212,0.1);color:#0078D4;padding:6px 12px;border-radius:100px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(0,120,212,0.2);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg> Workplace & Office</span></div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Automasi tugas kantor (Office 365), drafting email, dan akses data internal perusahaan</div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Terlalu bergantung pada pencarian web & gaya bahasa cenderung kaku</div>
-                            <div style="font-size:14px; font-weight:600; color:var(--text-primary); line-height:1.5;">Produktivitas enterprise, otomatisasi dokumen, dan alur kerja Microsoft 365</div>
+                            <div style="font-size:14px; font-weight:600; color:#0078D4; line-height:1.5;">Produktivitas enterprise, otomatisasi dokumen, dan alur kerja Microsoft 365</div>
                         </div>
 
                         <!-- DeepSeek -->
-                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px; border-radius:12px; transition:all 0.3s ease; cursor:default;" onmouseover="this.style.background='rgba(77,96,211,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(77,96,211,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='transparent'" style="border:1px solid transparent;">
+                        <div style="display:grid; grid-template-columns: 180px 1.5fr 2.5fr 1.5fr 1.5fr; gap:20px; padding:16px 24px; border-radius:12px; transition:all 0.3s ease; animation:fadeUp 0.5s ease-out both; animation-delay:0.5s; cursor:default;" onmouseover="this.style.background='rgba(77,96,211,0.06)';this.style.transform='scale(1.01)';this.style.borderColor='rgba(77,96,211,0.2)'" onmouseout="this.style.background='transparent';this.style.transform='none';this.style.borderColor='transparent'" style="border:1px solid transparent;">
                             <div style="display:flex; align-items:center; gap:12px; font-weight:700; font-size:18px; color:var(--text-primary);">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjgnGbkVN3vDHV8GV4Pp6UOjRnxEp-u_9Uk8E1qlSBeQ&s" alt="DeepSeek" style="width:32px; height:32px; object-fit:contain; border-radius:8px;">
                                 DeepSeek
@@ -2541,7 +2570,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             <div style="display:flex; align-items:center;"><span style="background:rgba(77,96,211,0.1);color:#4d60d3;padding:6px 12px;border-radius:100px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(77,96,211,0.2);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg> Reasoning & Code</span></div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Penalaran matematika kompleks (CoT), efisiensi biaya API tinggi, dan optimasi algoritma</div>
                             <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">Kurang mumpuni untuk gambar/visual & rentan disorientasi pada chat panjang</div>
-                            <div style="font-size:14px; font-weight:600; color:var(--text-primary); line-height:1.5;">Problem-solving STEM (matematika/coding) dan penggunaan API skala besar (hemat biaya)</div>
+                            <div style="font-size:14px; font-weight:600; color:#4d60d3; line-height:1.5;">Problem-solving STEM (matematika/coding) dan penggunaan API skala besar (hemat biaya)</div>
                         </div>
                     </div>
 
@@ -2601,7 +2630,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                     <div class="slide-content" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100%;padding:0 var(--slide-pad-x);z-index:2;gap:20px;">
                         <div style="position: relative; max-width: 1000px; margin: 0 auto; animation:fadeDown 0.6s ease-out both;">
                             <!-- Huge decorative quote mark -->
-                            <div style="position: absolute; top: -60px; left: -40px; font-family: Georgia, serif; font-size: 200px; color: rgba(52,168,83,0.08); line-height: 1; z-index: -1;">"</div>
+                            <div style="position: absolute; top: -60px; left: -40px; font-family: Georgia, serif; font-size: 200px; line-height: 1; z-index: -1; background: linear-gradient(135deg, rgba(52,168,83,0.15), rgba(66,133,244,0.15)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">"</div>
                             <p style="font-size:36px; color:var(--text-secondary); line-height:1.6; font-weight:500; font-style:italic; margin: 0;">
                                 Kalau kita sudah tahu AI apa yang paling cocok dengan tugas yang ingin kita kerjakan, terus bagaimana menggunakan AI itu dengan benar?
                             </p>
@@ -2615,7 +2644,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
 
                         <!-- Scaled down quote -->
                         <div style="opacity:0.6; transition:all 0.6s cubic-bezier(0.16, 1, 0.3, 1); transform:scale(0.85); position: relative; max-width: 1000px; margin: 0 auto;">
-                            <div style="position: absolute; top: -40px; left: -20px; font-family: Georgia, serif; font-size: 140px; color: rgba(52,168,83,0.08); line-height: 1; z-index: -1;">"</div>
+                            <div style="position: absolute; top: -40px; left: -20px; font-family: Georgia, serif; font-size: 140px; line-height: 1; z-index: -1; background: linear-gradient(135deg, rgba(52,168,83,0.15), rgba(66,133,244,0.15)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">"</div>
                             <p style="font-size:28px; color:var(--text-secondary); line-height:1.6; font-weight:500; font-style:italic; margin: 0;">
                                 Kalau kita sudah tahu AI apa yang paling cocok dengan tugas yang ingin kita kerjakan, terus bagaimana menggunakan AI itu dengan benar?
                             </p>
@@ -2625,14 +2654,14 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         <div style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); border: 1px solid rgba(52,168,83,0.25); border-radius: 40px; padding: 72px 56px; box-shadow: 0 30px 60px rgba(52,168,83,0.08); display:flex; flex-direction:column; align-items:center; max-width:1000px; width:100%; animation: fadeUp 0.7s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both; position: relative; overflow: hidden;">
 
                             <!-- Subtle card top highlight -->
-                            <div style="position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--green), #2db553);"></div>
+                            <div style="position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #34A853, #FBBC04, #4285F4);"></div>
 
                             <div style="margin-bottom: 28px;">
                                 <div style="background: rgba(52, 168, 83, 0.08); border: 1px solid rgba(52, 168, 83, 0.2); color: var(--green); padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 16px; letter-spacing: 2px; text-transform: uppercase; display:inline-block; animation: revealPop 0.5s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;">
                                     Kunci Sukses Penggunaan AI
                                 </div>
                             </div>
-                            <h2 style="font-family:var(--font-display); font-size:64px; font-weight:800; margin-bottom:24px; line-height:1.2; background: linear-gradient(135deg, #34A853, #1e8e3e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: fadeUp 0.6s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;">
+                            <h2 style="font-family:var(--font-display); font-size:64px; font-weight:800; margin-bottom:24px; line-height:1.2; white-space:nowrap; background: linear-gradient(135deg, #34A853, #FBBC04, #4285F4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: fadeUp 0.6s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;">
                                 Prompt & Context Engineering
                             </h2>
                             <p style="font-size:24px; color:var(--text-secondary); line-height:1.7; max-width:850px; margin:0 auto; animation: fadeUp 0.6s 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;">
@@ -2647,6 +2676,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
             SLIDE 27 — WHAT IS PROMPT & CONTEXT ENGINEERING?
             ============================================================ -->
             <section class="slide slide-pce-intro" id="slide-27">
+                <style>
+                    #slide-27 .pce-tag, #slide-27 .pce-example-item { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+                    #slide-27 .pce-tag:hover { transform: translateY(-2px); filter: brightness(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+                    #slide-27 .pce-example-item:hover { transform: scale(1.02); background: rgba(0,0,0,0.02); }
+                </style>
                 <div class="slide-label">Apa itu Prompt &amp; Context Engineering?</div>
                 <div class="pce-bg">
                     <div class="pce-dot-grid"></div>
@@ -2657,7 +2691,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                     <!-- Top row: 3 concept cards -->
                     <div class="pce-top-row">
                         <!-- Prompt -->
-                        <div class="pce-concept-card pce-card-prompt">
+                        <div class="pce-concept-card pce-card-prompt" style="animation: fadeUp 0.6s ease-out both; animation-delay: 0.1s;">
                             <div class="pce-card-header">
                                 <div class="pce-card-icon" style="background:rgba(66,133,244,0.08); border-color:rgba(66,133,244,0.2);">
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="1.5">
@@ -2692,14 +2726,14 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                         </div>
 
                         <!-- Arrow -->
-                        <div class="pce-flow-arrow">
+                        <div class="pce-flow-arrow" style="animation: fadeIn 0.6s ease-out both; animation-delay: 0.3s;">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </div>
 
                         <!-- Context -->
-                        <div class="pce-concept-card pce-card-context">
+                        <div class="pce-concept-card pce-card-context" style="animation: fadeUp 0.6s ease-out both; animation-delay: 0.5s;">
                             <div class="pce-card-header">
                                 <div class="pce-card-icon" style="background:rgba(52,168,83,0.08); border-color:rgba(52,168,83,0.2);">
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="1.5">
@@ -2737,7 +2771,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
 
                     <!-- Pipeline -->
                     <div class="pce-pipeline-v2">
-                        <div class="pce-pipe-stage pce-stage-input">
+                        <div class="pce-pipe-stage pce-stage-input" style="animation: fadeUp 0.5s ease-out both; animation-delay: 0.7s;">
                             <div class="pce-stage-icon" style="background:rgba(66,133,244,0.08); border-color:rgba(66,133,244,0.2);">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                             </div>
@@ -2750,12 +2784,12 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             <div class="pce-stage-caption">INPUT KITA</div>
                         </div>
 
-                        <div class="pce-pipe-connector">
+                        <div class="pce-pipe-connector" style="animation: fadeIn 0.5s ease-out both; animation-delay: 0.9s;">
                             <div class="pce-pipe-line"></div>
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </div>
 
-                        <div class="pce-pipe-stage pce-stage-process">
+                        <div class="pce-pipe-stage pce-stage-process" style="animation: fadeUp 0.5s ease-out both; animation-delay: 1.1s;">
                             <div class="pce-stage-icon pce-icon-ai" style="background:rgba(251,188,4,0.08); border-color:rgba(251,188,4,0.3);">
                                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#9A7400" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                             </div>
@@ -2763,12 +2797,12 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                             <div class="pce-stage-caption">PROSES</div>
                         </div>
 
-                        <div class="pce-pipe-connector">
+                        <div class="pce-pipe-connector" style="animation: fadeIn 0.5s ease-out both; animation-delay: 1.3s;">
                             <div class="pce-pipe-line"></div>
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </div>
 
-                        <div class="pce-pipe-stage pce-stage-output">
+                        <div class="pce-pipe-stage pce-stage-output" style="animation: fadeUp 0.5s ease-out both; animation-delay: 1.5s;">
                             <div class="pce-stage-icon" style="background:rgba(234,67,53,0.08); border-color:rgba(234,67,53,0.2);">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EA4335" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                             </div>
@@ -2784,6 +2818,21 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
             SLIDE 28 — WHY DOES IT MATTER?
             ============================================================ -->
             <section class="slide slide-why-matter" id="slide-28">
+                <style>
+                    #slide-28 .why-quality-card { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+                    #slide-28 .why-quality-good:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(52,168,83,0.15); border-color: rgba(52,168,83,0.4); }
+                    #slide-28 .why-quality-bad:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(234,67,53,0.1); border-color: rgba(234,67,53,0.3); }
+                    @keyframes fillBar1 { from { width: 0%; } to { width: 65%; } }
+                    @keyframes fillBar2 { from { width: 0%; } to { width: 22%; } }
+                    @keyframes fillBar3 { from { width: 0%; } to { width: 13%; } }
+                    @keyframes fillBarBad { from { width: 0%; } to { width: 28%; } }
+                    @keyframes fillBarGood { from { width: 0%; } to { width: 88%; } }
+                    #slide-28 .llm-pred-fill.fill-1 { animation: fillBar1 1s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+                    #slide-28 .llm-pred-fill.fill-2 { animation: fillBar2 1s 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+                    #slide-28 .llm-pred-fill.fill-3 { animation: fillBar3 1s 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+                    #slide-28 .why-bar-bad { animation: fillBarBad 1.5s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+                    #slide-28 .why-bar-good { animation: fillBarGood 1.5s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+                </style>
                 <div class="slide-label" style="color: rgba(255,255,255,0.4)">Mengapa Ini Penting?</div>
                 <div class="why-bg">
                     <div class="why-grid"></div>
@@ -2822,21 +2871,21 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                                         <div class="llm-pred-row">
                                             <span class="llm-pred-word">belajar</span>
                                             <div class="llm-pred-bar">
-                                                <div class="llm-pred-fill" style="width:65%; background:#34A853;"></div>
+                                                <div class="llm-pred-fill fill-1" style="width:65%; background:#34A853;"></div>
                                             </div>
                                             <span class="llm-pred-pct">65%</span>
                                         </div>
                                         <div class="llm-pred-row">
                                             <span class="llm-pred-word">bekerja</span>
                                             <div class="llm-pred-bar">
-                                                <div class="llm-pred-fill" style="width:22%; background:#FBBC04;"></div>
+                                                <div class="llm-pred-fill fill-2" style="width:22%; background:#FBBC04;"></div>
                                             </div>
                                             <span class="llm-pred-pct">22%</span>
                                         </div>
                                         <div class="llm-pred-row">
                                             <span class="llm-pred-word">berpikir</span>
                                             <div class="llm-pred-bar">
-                                                <div class="llm-pred-fill" style="width:13%; background:#EA4335;"></div>
+                                                <div class="llm-pred-fill fill-3" style="width:13%; background:#EA4335;"></div>
                                             </div>
                                             <span class="llm-pred-pct">13%</span>
                                         </div>
@@ -2895,6 +2944,20 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
             SLIDE 29 — TECHNIQUES OVERVIEW
             ============================================================ -->
             <section class="slide slide-techniques" id="slide-29">
+                <style>
+                    #slide-29 .tech-card { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); animation: fadeUp 0.6s ease-out both; }
+                    #slide-29 .tech-card:nth-child(1) { animation-delay: 0.1s; }
+                    #slide-29 .tech-card:nth-child(2) { animation-delay: 0.2s; }
+                    #slide-29 .tech-card:nth-child(3) { animation-delay: 0.3s; }
+                    #slide-29 .tech-card:nth-child(4) { animation-delay: 0.4s; }
+                    #slide-29 .tech-card:nth-child(5) { animation-delay: 0.5s; }
+                    
+                    #slide-29 .tech-card:nth-child(1):hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(66,133,244,0.15); border-color: rgba(66,133,244,0.3); }
+                    #slide-29 .tech-card:nth-child(2):hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(234,67,53,0.15); border-color: rgba(234,67,53,0.3); }
+                    #slide-29 .tech-card:nth-child(3):hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(251,188,4,0.15); border-color: rgba(251,188,4,0.3); }
+                    #slide-29 .tech-card:nth-child(4):hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(52,168,83,0.15); border-color: rgba(52,168,83,0.3); }
+                    #slide-29 .tech-card:nth-child(5):hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(77,96,211,0.15); border-color: rgba(77,96,211,0.3); }
+                </style>
                 <div class="slide-label">Teknik Prompt &amp; Context Engineering</div>
                 <div class="tech-bg">
                     <div class="tech-dot-grid"></div>
