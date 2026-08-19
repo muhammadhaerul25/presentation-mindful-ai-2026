@@ -17138,6 +17138,7 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
     </script>
 
     <script>
+      let lastQuestionsLength = -1;
       async function fetchQuestions() {
         try {
           const apiUrl = window.location.protocol === 'file:' 
