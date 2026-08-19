@@ -8908,15 +8908,15 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
             text-align: center;
           "
         >
-          <div class="slide-content" style="max-width: 600px">
+          <div class="slide-content" style="max-width: 800px; padding: 20px">
             <h2
               style="
-                font-size: 42px;
+                font-size: 64px;
                 font-weight: 900;
                 background: linear-gradient(135deg, #0d8246, #34a853);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                margin-bottom: 16px;
+                margin-bottom: 24px;
                 letter-spacing: -0.02em;
               "
             >
@@ -8924,11 +8924,11 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
             </h2>
             <p
               style="
-                font-size: 20px;
+                font-size: 26px;
                 color: var(--text-muted);
                 line-height: 1.6;
                 font-weight: 500;
-                margin-bottom: 48px;
+                margin-bottom: 56px;
               "
             >
               Selama materi berlangsung,<br />jika ada pertanyaan silakan
@@ -8938,22 +8938,35 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
             <div
               style="
                 background: var(--surface);
-                padding: 40px 48px;
-                border-radius: 32px;
+                padding: 56px 64px;
+                border-radius: 40px;
                 box-shadow:
                   0 24px 48px rgba(0, 0, 0, 0.12),
                   0 0 0 1px rgba(0, 0, 0, 0.05);
                 display: inline-block;
+                transition:
+                  transform 0.3s ease,
+                  box-shadow 0.3s ease;
+              "
+              onmouseover="
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow =
+                  '0 32px 64px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05)';
+              "
+              onmouseout="
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow =
+                  '0 24px 48px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)';
               "
             >
               <img
                 src="assets/images/qr_form.png"
                 alt="QR Code Form Pertanyaan"
                 style="
-                  width: 250px;
-                  height: 250px;
+                  width: 360px;
+                  height: 360px;
                   display: block;
-                  margin: 0 auto 24px;
+                  margin: 0 auto 32px;
                 "
               />
 
@@ -8961,23 +8974,24 @@ SLIDE 6b - AI IS EVERYWHERE (Daily Life Showcase 3)
                 style="
                   background: #e6f4ea;
                   color: #0d8246;
-                  padding: 12px 28px;
+                  padding: 16px 36px;
                   border-radius: 100px;
                   display: inline-flex;
                   align-items: center;
-                  gap: 8px;
-                  font-weight: 700;
-                  font-size: 16px;
+                  gap: 12px;
+                  font-weight: 800;
+                  font-size: 20px;
                   box-shadow: 0 4px 12px rgba(52, 168, 83, 0.15);
+                  transition: all 0.3s ease;
                 "
               >
                 <svg
-                  width="20"
-                  height="20"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="2.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
