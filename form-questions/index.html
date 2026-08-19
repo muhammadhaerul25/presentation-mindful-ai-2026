@@ -381,9 +381,9 @@
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nama, pertanyaan }),
-          }).catch(() => ({ ok: true, json: async () => ({ success: true }) }));
+          });
 
-          if (!response.ok && response.status !== 404) {
+          if (!response.ok) {
             const result = await response.json().catch(() => ({}));
             throw new Error(
               result.error || "Terjadi kesalahan saat submit data.",
@@ -397,18 +397,7 @@
           form.reset();
         } catch (error) {
           console.error(error);
-          if (
-            error.message.includes("Failed to fetch") ||
-            error.message.includes("404")
-          ) {
-            form.style.display = "none";
-            document.querySelector(".header").style.display = "none";
-            alertBox.style.display = "none";
-            successState.style.display = "block";
-            form.reset();
-          } else {
-            showAlert(`Gagal menyimpan: ${error.message}`, "error");
-          }
+          showAlert(`Gagal menyimpan: ${error.message}`, "error");
         } finally {
           submitBtn.disabled = false;
           submitText.style.display = "block";
