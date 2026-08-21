@@ -668,8 +668,389 @@
           </div>
         </section>
 
+        
+        
+        
+        
+        
         <!-- ============================================================
-           CHAPTER 1 COVER
+           SLIDE 3A — PROFIL KEBIASAAN
+           ============================================================ -->
+        <section class="slide" id="slide-3a" style="background: var(--bg);">
+          <div class="slide-label">Survey Data</div>
+
+          <style>
+            #slide-3a {
+              display: flex;
+              flex-direction: column;
+              overflow: hidden;
+            }
+            #slide-3a .s3a-inner {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              padding: 56px 96px 44px;
+              gap: 14px;
+              overflow: hidden;
+            }
+            /* ── Header ── */
+            #slide-3a .s3a-h2 {
+              font-family: var(--font-display);
+              font-size: 44px;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin: 0 0 5px;
+              letter-spacing: -0.5px;
+              line-height: 1.15;
+            }
+            #slide-3a .s3a-sub {
+              font-family: var(--font-body);
+              font-size: 16px;
+              color: var(--text-secondary);
+              margin: 0;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            }
+            #slide-3a .s3a-badge {
+              background: var(--surface);
+              border: 1px solid var(--border);
+              border-radius: 20px;
+              padding: 2px 12px;
+              font-size: 13px;
+              font-weight: 700;
+              color: var(--text-secondary);
+            }
+            /* ── Top 3-card row ── */
+            #slide-3a .s3a-top {
+              display: flex;
+              gap: 16px;
+              height: 248px;
+              flex-shrink: 0;
+            }
+            #slide-3a .s3a-card {
+              background: var(--surface);
+              border: 1px solid var(--border);
+              border-radius: 18px;
+              padding: 22px 24px 18px;
+              box-shadow: var(--shadow-sm);
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              min-width: 0;
+              overflow: hidden;
+            }
+            #slide-3a .s3a-clbl {
+              font-family: var(--font-body);
+              font-size: 12px;
+              font-weight: 700;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: var(--text-muted);
+              margin: 0 0 10px;
+              flex-shrink: 0;
+            }
+            /* Skor Kuis */
+            #slide-3a .s3a-score {
+              font-family: var(--font-display);
+              font-size: 58px;
+              font-weight: 800;
+              color: #4285F4;
+              line-height: 1;
+              flex-shrink: 0;
+            }
+            #slide-3a .s3a-score-s {
+              font-size: 15px;
+              color: var(--text-muted);
+              margin: 4px 0 10px;
+              flex-shrink: 0;
+            }
+            #slide-3a .s3a-barv {
+              display: flex;
+              align-items: flex-end;
+              gap: 5px;
+              flex: 1;
+              border-bottom: 1.5px solid var(--border-light);
+              min-height: 0;
+            }
+            #slide-3a .bvc {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-end;
+              gap: 2px;
+              height: 100%;
+            }
+            #slide-3a .bvc-n {
+              font-size: 9px;
+              font-weight: 600;
+              color: var(--text-muted);
+              line-height: 1;
+            }
+            #slide-3a .bvc-b {
+              width: 100%;
+              background: #4285F4;
+              border-radius: 3px 3px 0 0;
+              min-height: 2px;
+            }
+            #slide-3a .bvc-b.hl {
+              background: linear-gradient(180deg, #EA4335, #FBBC05);
+            }
+            #slide-3a .s3a-ax {
+              display: flex;
+              gap: 5px;
+              margin-top: 5px;
+              flex-shrink: 0;
+            }
+            #slide-3a .ax-l {
+              flex: 1;
+              text-align: center;
+              font-size: 9px;
+              color: var(--text-muted);
+            }
+            /* Seberapa Paham */
+            #slide-3a .s3a-hlist {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              justify-content: space-evenly;
+              min-height: 0;
+            }
+            #slide-3a .hrow {
+              display: flex;
+              align-items: center;
+            }
+            #slide-3a .hlbl {
+              width: 130px;
+              min-width: 130px;
+              text-align: right;
+              padding-right: 12px;
+              font-size: 11px;
+              line-height: 1.35;
+              color: var(--text-secondary);
+            }
+            #slide-3a .htrack {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            }
+            #slide-3a .hfill {
+              height: 16px;
+              background: #4285F4;
+              border-radius: 0 5px 5px 0;
+              min-width: 4px;
+            }
+            #slide-3a .hfill.top {
+              background: linear-gradient(90deg, #34A853, #4285F4);
+            }
+            #slide-3a .hcount {
+              font-size: 15px;
+              font-weight: 700;
+              color: var(--text-primary);
+            }
+            #slide-3a .hcount.top { color: #34A853; }
+            /* Frekuensi donut */
+            #slide-3a .s3a-donut-w {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 22px;
+              flex: 1;
+              min-height: 0;
+            }
+            #slide-3a .s3a-leg {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+            }
+            #slide-3a .leg-i {
+              display: flex;
+              flex-direction: column;
+              gap: 1px;
+            }
+            #slide-3a .leg-r {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            }
+            #slide-3a .leg-dot {
+              width: 11px;
+              height: 11px;
+              border-radius: 3px;
+              flex-shrink: 0;
+            }
+            #slide-3a .leg-txt {
+              font-size: 12px;
+              color: var(--text-secondary);
+            }
+            #slide-3a .leg-num {
+              font-family: var(--font-display);
+              font-size: 26px;
+              font-weight: 800;
+              padding-left: 19px;
+            }
+            /* ── Bottom usage chart ── */
+            #slide-3a .s3a-bot {
+              flex: 1;
+              background: var(--surface);
+              border: 1px solid var(--border);
+              border-radius: 18px;
+              padding: 18px 28px 22px 224px;
+              box-shadow: var(--shadow-sm);
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              min-height: 0;
+              overflow: hidden;
+            }
+            #slide-3a .bot-title {
+              position: absolute;
+              top: 18px;
+              left: 28px;
+              font-size: 12px;
+              font-weight: 700;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              color: var(--text-muted);
+              white-space: nowrap;
+            }
+            #slide-3a .urows {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              flex: 1;
+              margin-top: 30px;
+              min-height: 0;
+            }
+            #slide-3a .urow {
+              display: flex;
+              align-items: center;
+              position: relative;
+            }
+            #slide-3a .ulbl {
+              position: absolute;
+              right: calc(100% + 10px);
+              width: 192px;
+              text-align: right;
+              font-size: 12px;
+              color: var(--text-secondary);
+              white-space: nowrap;
+            }
+            #slide-3a .ubar {
+              height: 18px;
+              background: #4285F4;
+              border-radius: 0 5px 5px 0;
+              min-width: 4px;
+            }
+            #slide-3a .ubar.top {
+              background: linear-gradient(90deg, #EA4335, #34A853);
+            }
+            #slide-3a .un {
+              font-size: 14px;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin-left: 9px;
+            }
+            #slide-3a .un.top { color: #34A853; }
+          </style>
+
+          <div class="s3a-inner">
+
+            <!-- Header -->
+            <div style="flex-shrink:0;">
+              <h2 class="s3a-h2">Profil &amp; Kebiasaan Peserta terhadap AI</h2>
+
+            </div>
+
+            <!-- Top 3 cards -->
+            <div class="s3a-top">
+
+              <!-- Skor Kuis -->
+              <div class="s3a-card" style="flex:1.05;">
+                <p class="s3a-clbl">Skor Kuis</p>
+                <div class="s3a-score">7.2</div>
+                <div class="s3a-score-s">/ 10 rata-rata</div>
+                <div class="s3a-barv">
+                  <div class="bvc"><span class="bvc-n">2%</span><div class="bvc-b" style="height:4.7%"></div></div>
+                  <div class="bvc"><span class="bvc-n">2%</span><div class="bvc-b" style="height:4.7%"></div></div>
+                  <div class="bvc"><span class="bvc-n">2%</span><div class="bvc-b" style="height:4.7%"></div></div>
+                  <div class="bvc"><span class="bvc-n">8%</span><div class="bvc-b" style="height:19%"></div></div>
+                  <div class="bvc"><span class="bvc-n">4%</span><div class="bvc-b" style="height:9.5%"></div></div>
+                  <div class="bvc"><span class="bvc-n">2%</span><div class="bvc-b" style="height:4.7%"></div></div>
+                  <div class="bvc"><span class="bvc-n">8%</span><div class="bvc-b" style="height:19%"></div></div>
+                  <div class="bvc"><span class="bvc-n">13%</span><div class="bvc-b" style="height:33%"></div></div>
+                  <div class="bvc"><span class="bvc-n">17%</span><div class="bvc-b" style="height:43%"></div></div>
+                  <div class="bvc"><span class="bvc-n" style="color:#EA4335;font-size:10px;font-weight:800;">40%</span><div class="bvc-b hl" style="height:100%"></div></div>
+                  <div class="bvc"><span class="bvc-n">4%</span><div class="bvc-b" style="height:9.5%"></div></div>
+                </div>
+                <div class="s3a-ax">
+                  <div class="ax-l">0</div><div class="ax-l">1</div><div class="ax-l">2</div><div class="ax-l">3</div><div class="ax-l">4</div><div class="ax-l">5</div><div class="ax-l">6</div><div class="ax-l">7</div><div class="ax-l">8</div><div class="ax-l">9</div><div class="ax-l">10</div>
+                </div>
+              </div>
+
+              <!-- Seberapa Paham AI -->
+              <div class="s3a-card" style="flex:1.3;">
+                <p class="s3a-clbl">Seberapa Paham AI?</p>
+                <div class="s3a-hlist">
+                  <div class="hrow"><div class="hlbl">Pernah coba,<br>masih bingung</div><div class="htrack"><div class="hfill" style="width:3.5%;background:#FBBC05;"></div><span class="hcount" style="color:#FBBC05;">2%</span></div></div>
+                  <div class="hrow"><div class="hlbl">Belum pernah coba</div><div class="htrack"><div class="hfill" style="width:3.5%;background:#FBBC05;"></div><span class="hcount" style="color:#FBBC05;">2%</span></div></div>
+                  <div class="hrow"><div class="hlbl">Sudah mendalami<br>&amp; eksplor</div><div class="htrack"><div class="hfill" style="width:35.7%"></div><span class="hcount">19%</span></div></div>
+                  <div class="hrow"><div class="hlbl">Paham dasar-<br>dasarnya</div><div class="htrack"><div class="hfill" style="width:46.4%"></div><span class="hcount">25%</span></div></div>
+                  <div class="hrow"><div class="hlbl" style="color:var(--blue);font-weight:600;">Cukup sering<br>pakai sehari-hari</div><div class="htrack"><div class="hfill top" style="width:100%"></div><span class="hcount top">53%</span></div></div>
+                </div>
+              </div>
+
+              <!-- Frekuensi Penggunaan -->
+              <div class="s3a-card" style="flex:1;">
+                <p class="s3a-clbl">Frekuensi Penggunaan / Minggu</p>
+                <div class="s3a-donut-w">
+                  <svg width="148" height="148" viewBox="0 0 148 148" style="flex-shrink:0;">
+                    <circle cx="74" cy="74" r="55" fill="none" stroke="#4285F4" stroke-width="26" stroke-dasharray="195 150" stroke-dashoffset="0"    transform="rotate(-90 74 74)"/>
+                    <circle cx="74" cy="74" r="55" fill="none" stroke="#34A853" stroke-width="26" stroke-dasharray="124 221" stroke-dashoffset="-195"  transform="rotate(-90 74 74)"/>
+                    <circle cx="74" cy="74" r="55" fill="none" stroke="#FBBC05"      stroke-width="26" stroke-dasharray="26  319" stroke-dashoffset="-319"  transform="rotate(-90 74 74)"/>
+                    <circle cx="74" cy="74" r="42" fill="#FFFFFF"/>
+                  </svg>
+                  <div class="s3a-leg">
+                    <div class="leg-i">
+                      <div class="leg-r"><div class="leg-dot" style="background:#4285F4;"></div><span class="leg-txt">Beberapa kali/minggu</span></div>
+                      <div class="leg-num" style="color:#4285F4;">57%</div>
+                    </div>
+                    <div class="leg-i">
+                      <div class="leg-r"><div class="leg-dot" style="background:#34A853;"></div><span class="leg-txt">Setiap hari</span></div>
+                      <div class="leg-num" style="color:#34A853;">36%</div>
+                    </div>
+                    <div class="leg-i">
+                      <div class="leg-r"><div class="leg-dot" style="background:#FBBC05;"></div><span class="leg-txt">Jarang (&lt;1x/minggu)</span></div>
+                      <div class="leg-num" style="color:#FBBC05;">8%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /top -->
+
+            <!-- Bottom usage chart -->
+            <div class="s3a-bot">
+              <span class="bot-title">Kamu Pakai AI untuk Apa Selama Ini? (multi-jawaban)</span>
+              <div class="urows">
+                <div class="urow"><div class="ulbl">Belum pernah menggunakan AI</div><div class="ubar" style="width:2.2%;background:#EA4335;"></div><span class="un" style="color:#EA4335;">2%</span></div>
+                <div class="urow"><div class="ulbl">Membuat konten visual/gambar</div><div class="ubar" style="width:36.3%;background:#FBBC05;"></div><span class="un" style="color:#b8860b;">30%</span></div>
+                <div class="urow"><div class="ulbl">Belajar bahasa/skill baru</div><div class="ubar" style="width:38.6%;background:#FBBC05;"></div><span class="un" style="color:#b8860b;">32%</span></div>
+                <div class="urow"><div class="ulbl">Hiburan/ngobrol santai (chatbot)</div><div class="ubar" style="width:43.1%;"></div><span class="un">36%</span></div>
+                <div class="urow"><div class="ulbl">Menulis (esai, caption, email, dll.)</div><div class="ubar" style="width:45.4%;"></div><span class="un">38%</span></div>
+                <div class="urow"><div class="ulbl">Produktivitas (ringkasan, to-do, dll.)</div><div class="ubar" style="width:52.2%;"></div><span class="un">43%</span></div>
+                <div class="urow"><div class="ulbl">Tugas kuliah/akademik</div><div class="ubar" style="width:88.6%"></div><span class="un">74%</span></div>
+                <div class="urow"><div class="ulbl" style="color:var(--text-primary);font-weight:600;">Mencari informasi/riset</div><div class="ubar top" style="width:100%"></div><span class="un top">83%</span></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ============================================================
+           SLIDE 3B — TOP OF MIND
            ============================================================ -->
         <section
           class="slide"
@@ -1095,6 +1476,77 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ============================================================
+           CHAPTER 1 COVER
+           ============================================================ -->
+        <section class="slide" id="slide-3b" style="background: var(--surface);">
+          <div class="slide-label">Survey Data</div>
+
+          <style>
+            #slide-3b {
+              display: flex;
+              flex-direction: column;
+              overflow: hidden;
+            }
+            #slide-3b .s3b-inner {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              padding: 56px 96px 52px;
+              gap: 20px;
+              overflow: hidden;
+            }
+            #slide-3b .s3b-h2 {
+              font-family: var(--font-display);
+              font-size: 48px;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin: 0;
+              letter-spacing: -0.5px;
+            }
+            #slide-3b .s3b-cloud {
+              flex: 1;
+              background: var(--bg);
+              border: 1px solid var(--border);
+              border-radius: 22px;
+              position: relative;
+              overflow: hidden;
+              box-shadow: var(--shadow-sm);
+              min-height: 0;
+            }
+            #slide-3b .ww {
+              position: absolute;
+              font-family: 'Georgia', 'Times New Roman', serif;
+              font-weight: 700;
+              line-height: 1;
+              transition: transform 0.25s ease;
+              user-select: none;
+              cursor: default;
+            }
+            #slide-3b .ww:hover {
+              transform: scale(1.08) !important;
+              z-index: 10;
+            }
+          </style>
+
+          <div class="s3b-inner">
+            <h2 class="s3b-h2">Top of Mind: "AI" = ?</h2>
+
+            <div class="s3b-cloud">
+              <div class="ww" style="top:50%;left:50%;transform:translate(-50%,-52%);font-size:clamp(80px,9.5vw,140px);color:#159868;letter-spacing:-2px;">ChatGPT</div>
+              <div class="ww" style="top:11%;right:7%;font-size:clamp(44px,5.5vw,80px);color:#4285f4;letter-spacing:-1px;">Gemini</div>
+              <div class="ww" style="bottom:13%;left:7%;font-size:clamp(40px,5vw,72px);color:#d97757;letter-spacing:-1px;">Claude</div>
+              <div class="ww" style="top:13%;left:12%;font-size:clamp(16px,1.8vw,26px);color:var(--text-secondary);">DeepSeek</div>
+              <div class="ww" style="top:46%;left:6%;font-size:clamp(14px,1.5vw,20px);color:var(--blue);font-weight:800;">Cloud AI</div>
+              <div class="ww" style="bottom:32%;right:9%;font-size:clamp(20px,2.2vw,34px);color:#9b51e0;">Dolla</div>
+              <div class="ww" style="bottom:9%;left:33%;font-size:clamp(14px,1.4vw,20px);color:#b45309;font-weight:800;">Grok</div>
+              <div class="ww" style="bottom:8%;right:36%;font-size:clamp(14px,1.4vw,20px);color:#e91e63;font-weight:800;">Kimi</div>
+              <div class="ww" style="bottom:14%;right:20%;font-size:clamp(15px,1.5vw,22px);color:#0288d1;font-weight:800;">Qwen</div>
             </div>
           </div>
         </section>
