@@ -41,7 +41,7 @@ export default async function handler(req, res) {
   });
 
   try {
-    // Insert ke tabel mindful-ai-feedbacks
+    // 1. Insert ke tabel mindful-ai-feedbacks
     const query1 = `
       INSERT INTO "mindful-ai-feedbacks" (nama, email, rating, alasan, pesan) 
       VALUES ($1, $2, $3, $4, $5)
@@ -51,10 +51,10 @@ export default async function handler(req, res) {
 
     const result = await pool.query(query1, values1);
 
-    // Insert ke tabel feedbacks
+    // 2. Insert ke tabel feedbacks
     const query2 = `
-      INSERT INTO feedbacks (nama, email, rating, alasan, pesan, source) 
-      VALUES ($1, $2, $3, $4, $5, $6);
+      INSERT INTO feedbacks (nama_lengkap, email, rating, alasan, pesan_kesan, source, created_at) 
+      VALUES ($1, $2, $3, $4, $5, $6, NOW());
     `;
     const values2 = [nama, email, rating, alasan, pesan, 'Mindful AI 2026'];
     
