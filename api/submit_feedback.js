@@ -42,14 +42,23 @@ export default async function handler(req, res) {
 
   try {
     // Insert ke tabel mindful-ai-feedbacks
-    const query = `
+    const query1 = `
       INSERT INTO "mindful-ai-feedbacks" (nama, email, rating, alasan, pesan) 
       VALUES ($1, $2, $3, $4, $5)
       RETURNING *;
     `;
-    const values = [nama, email, rating, alasan, pesan];
+    const values1 = [nama, email, rating, alasan, pesan];
 
-    const result = await pool.query(query, values);
+    const result = await pool.query(query1, values1);
+
+    // Insert ke tabel feedbacks
+    const query2 = `
+      INSERT INTO feedbacks (nama, email, rating, alasan, pesan, source) 
+      VALUES ($1, $2, $3, $4, $5, $6);
+    `;
+    const values2 = [nama, email, rating, alasan, pesan, 'Mindful AI 2026'];
+    
+    await pool.query(query2, values2);
 
     // Kirim respons sukses
     res.status(200).json({
