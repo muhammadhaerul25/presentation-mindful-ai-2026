@@ -3,26 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Feedback - Mindful AI 2026</title>
+    <meta name="author" content="Yayasan Khouw Kalbe" />
+    <meta
+      name="description"
+      content="Form Feedback Resmi Seminar Mindful AI 2026 - Yayasan Khouw Kalbe"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Form Feedback - Mindful AI 2026 | Yayasan Khouw Kalbe</title>
     <link
       rel="icon"
       type="image/jpeg"
       href="../assets/logo/logo-yayasan-khouw-kalbe.jpg"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
       :root {
-        --primary: #34a853;
-        --primary-dark: #0d8246;
-        --error: #d93025;
-        --bg: #f0f4f9;
-        --surface: #ffffff;
-        --text: #202124;
-        --text-muted: #5f6368;
-        --border: #dadce0;
+        --primary: #0d8246;
+        --primary-light: #e8f5ed;
+        --primary-hover: #0a6b39;
+        --accent: #22c55e;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --bg-gradient: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 50%, #eff6ff 100%);
+        --card-bg: #ffffff;
+        --border-color: #e2e8f0;
+        --error: #ef4444;
       }
 
       * {
@@ -32,88 +42,113 @@
       }
 
       body {
-        font-family:
-          "Inter",
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          Helvetica,
-          Arial,
-          sans-serif;
-        background-color: var(--bg);
-        color: var(--text);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: var(--bg-gradient);
+        color: var(--text-main);
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
         padding: 40px 20px;
       }
 
-      .container {
-        background: var(--surface);
-        max-width: 640px;
+      .main-card {
+        background: var(--card-bg);
+        max-width: 620px;
         width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-        position: relative;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.06), 0 20px 25px -5px rgba(13, 130, 70, 0.05);
+        border: 1px solid var(--border-color);
         overflow: hidden;
-        margin-bottom: 40px;
+        margin-bottom: 24px;
       }
 
-      /* Google forms style colored top border */
-      .container::before {
-        content: "";
-        display: block;
-        height: 10px;
-        width: 100%;
-        background: linear-gradient(to right, #0d8246, #34a853);
-      }
-
-      .content-padding {
-        padding: 40px;
-      }
-
-      .header {
+      .card-header {
+        background: linear-gradient(135deg, #0d8246 0%, #15803d 100%);
+        padding: 32px 36px 28px;
+        color: #ffffff;
         text-align: center;
-        margin-bottom: 32px;
+        position: relative;
       }
 
-      .header h2 {
-        font-size: 20px;
+      .brand-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(8px);
+        padding: 6px 14px;
+        border-radius: 100px;
+        font-size: 12px;
         font-weight: 600;
-        color: var(--text);
-        margin-bottom: 8px;
-      }
-
-      .header h1 {
-        font-size: 28px;
-        font-weight: 700;
-        color: var(--text);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
         margin-bottom: 16px;
-        line-height: 1.3;
+        border: 1px solid rgba(255, 255, 255, 0.25);
       }
 
-      .header p {
-        font-size: 14px;
-        color: var(--text-muted);
+      .card-header h1 {
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 1.35;
+        margin-bottom: 10px;
+      }
+
+      .card-header p {
+        font-size: 13.5px;
+        opacity: 0.92;
+        line-height: 1.55;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .card-body {
+        padding: 32px 36px;
+      }
+
+      .benefit-box {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-left: 4px solid var(--primary);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 28px;
+      }
+
+      .benefit-box-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .benefit-list {
+        margin-left: 20px;
+        font-size: 13.5px;
+        color: #334155;
         line-height: 1.6;
       }
 
       .form-group {
-        margin-bottom: 24px;
+        margin-bottom: 22px;
       }
 
-      .form-group > label,
+      .form-group label,
       .form-group .group-label {
         display: block;
         font-size: 14px;
         font-weight: 600;
-        margin-bottom: 12px;
-        color: var(--text);
+        color: var(--text-main);
+        margin-bottom: 8px;
       }
 
-      .form-group > label.required::after,
+      .form-group label.required::after,
       .form-group .group-label.required::after {
         content: " *";
         color: var(--error);
@@ -122,107 +157,108 @@
       .form-control {
         width: 100%;
         padding: 12px 16px;
-        font-size: 15px;
-        border: 1px solid var(--border);
-        border-radius: 6px;
+        font-size: 14.5px;
+        font-family: inherit;
+        border: 1.5px solid var(--border-color);
+        border-radius: 10px;
         transition: all 0.2s ease;
         outline: none;
         background: #ffffff;
-        color: var(--text);
-        font-family: "Inter", sans-serif;
+        color: var(--text-main);
       }
 
       .form-control::placeholder {
-        color: #9aa0a6;
-      }
-
-      .form-control:hover {
-        border-color: #b9babc;
+        color: #94a3b8;
       }
 
       .form-control:focus {
         border-color: var(--primary);
-        border-width: 2px;
-        padding: 11px 15px; /* offset the 2px border so it doesn't jump */
+        box-shadow: 0 0 0 4px rgba(13, 130, 70, 0.12);
       }
 
       textarea.form-control {
         resize: vertical;
-        min-height: 100px;
+        min-height: 95px;
         line-height: 1.5;
       }
 
-      .rating-group {
+      .rating-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 6px;
       }
 
-      .rating-group input[type="radio"] {
+      .rating-container input[type="radio"] {
         display: none;
       }
 
-      .rating-group label {
+      .rating-container label {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 42px;
-        height: 42px;
-        border: 1px solid var(--border);
-        border-radius: 4px;
+        width: 44px;
+        height: 44px;
+        border: 1.5px solid var(--border-color);
+        border-radius: 10px;
         cursor: pointer;
-        font-weight: 500;
-        font-size: 15px;
-        color: var(--text-muted);
-        background: #ffffff;
-        transition: all 0.2s;
-      }
-
-      .rating-group label:hover {
-        background: #f8f9fa;
-      }
-
-      .rating-group input[type="radio"]:checked + label {
-        background: #e6f4ea;
-        color: var(--primary);
-        border-color: var(--primary);
         font-weight: 600;
+        font-size: 14px;
+        color: var(--text-muted);
+        background: #f8fafc;
+        transition: all 0.2s ease;
+      }
+
+      .rating-container label:hover {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+        color: var(--text-main);
+      }
+
+      .rating-container input[type="radio"]:checked + label {
+        background: var(--primary);
+        color: #ffffff;
+        border-color: var(--primary);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(13, 130, 70, 0.25);
       }
 
       .btn-submit {
         width: 100%;
         padding: 14px;
         font-size: 15px;
-        font-weight: 600;
-        color: #fff;
+        font-weight: 700;
+        color: #ffffff;
         background: var(--primary);
         border: none;
-        border-radius: 6px;
+        border-radius: 10px;
         cursor: pointer;
-        transition: background 0.2s;
+        transition: all 0.2s ease;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 12px;
-        margin-top: 32px;
+        gap: 10px;
+        margin-top: 28px;
+        box-shadow: 0 4px 12px rgba(13, 130, 70, 0.2);
       }
 
       .btn-submit:hover:not(:disabled) {
-        background: var(--primary-dark);
+        background: var(--primary-hover);
+        box-shadow: 0 6px 16px rgba(13, 130, 70, 0.3);
       }
 
       .btn-submit:disabled {
         background: #94a3b8;
         cursor: not-allowed;
+        box-shadow: none;
       }
 
       .spinner {
         width: 18px;
         height: 18px;
-        border: 2px solid rgba(255, 255, 255, 0.4);
+        border: 2.5px solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         border-top-color: #fff;
-        animation: spin 1s linear infinite;
+        animation: spin 0.8s linear infinite;
         display: none;
       }
 
@@ -232,109 +268,102 @@
         }
       }
 
-      @media (max-width: 600px) {
-        body {
-          padding: 20px 16px;
-        }
-        .content-padding {
-          padding: 32px 24px;
-        }
-        .header h1 {
-          font-size: 24px;
-        }
-        .rating-group label {
-          width: 36px;
-          height: 36px;
-          font-size: 14px;
-        }
-      }
-
       .alert {
         padding: 12px 16px;
-        border-radius: 6px;
+        border-radius: 10px;
         font-size: 14px;
         font-weight: 500;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
         display: none;
       }
+
       .alert.error {
-        background: #fce8e6;
-        color: #d93025;
-        border: 1px solid #fad2cf;
+        background: #fef2f2;
+        color: #dc2626;
+        border: 1px solid #fecaca;
         display: block;
       }
 
       #successState {
         display: none;
         text-align: center;
-        padding: 20px 0;
+        padding: 24px 0;
       }
 
       .success-icon {
         width: 64px;
         height: 64px;
-        background: #e6f4ea;
+        background: #dcfce7;
+        color: #15803d;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 24px;
-        color: #137333;
+        margin: 0 auto 20px;
+      }
+
+      .footer-disclaimer {
+        max-width: 580px;
+        text-align: center;
+        font-size: 12px;
+        color: #64748b;
+        line-height: 1.6;
+        padding: 0 16px;
+      }
+
+      .footer-disclaimer a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 16px 12px;
+        }
+        .card-header {
+          padding: 24px 20px;
+        }
+        .card-header h1 {
+          font-size: 19px;
+        }
+        .card-body {
+          padding: 24px 18px;
+        }
+        .rating-container label {
+          width: 38px;
+          height: 38px;
+          font-size: 13px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="content-padding">
-        <div class="header">
-          <h2>Form Feedback</h2>
-          <h1>
-            Materi Mindful AI: AI Personalization for Student Productivity
-          </h1>
-          <p>
-            Materi lengkap akan dikirimkan via email kepada peserta yang telah mengisi form feedback berikut.
-          </p>
+    <main class="main-card">
+      <div class="card-header" id="formHeader">
+        <div class="brand-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>Yayasan Khouw Kalbe &bull; Mindful AI 2026</span>
         </div>
+        <h1>Form Evaluasi &amp; Feedback Materi</h1>
+        <p>
+          AI Personalization for Student Productivity — Materi lengkap akan dikirimkan otomatis via email setelah Anda mengisi evaluasi ini.
+        </p>
+      </div>
 
-        <div
-          style="
-            background: #f8fbf9;
-            border: 1px solid #cce8d7;
-            border-radius: 12px;
-            padding: 16px 20px;
-            margin-bottom: 28px;
-            text-align: left;
-          "
-        >
-          <div
-            style="
-              font-size: 14px;
-              font-weight: 700;
-              color: #0d8246;
-              margin-bottom: 10px;
-              display: flex;
-              align-items: center;
-              gap: 8px;
-            "
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+      <div class="card-body">
+        <div class="benefit-box">
+          <div class="benefit-box-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             <span>Materi yang akan Anda dapatkan:</span>
           </div>
-          <ol style="margin-left: 20px; font-size: 13.5px; color: #3c4043; line-height: 1.6;">
-            <li>
-              <strong>Slide Presentasi:</strong> <em>AI Personalization for Student Productivity</em>
-            </li>
-            <li style="margin-top: 4px;">
-              <strong>2 Modul Praktis AI:</strong>
-              <ul style="margin-left: 18px; list-style-type: disc; color: #5f6368; margin-top: 2px;">
-                <li>Modul Gemini Gems for Students</li>
-                <li>Modul Gemini Notebook for Students</li>
-              </ul>
-            </li>
+          <ol class="benefit-list">
+            <li><strong>Slide Presentasi Lengkap:</strong> <em>Mindful AI 2026</em></li>
+            <li><strong>2 Modul Praktis AI Personalization:</strong> Gems &amp; Notebook for Students</li>
           </ol>
         </div>
 
@@ -346,6 +375,7 @@
             <input
               type="text"
               id="nama"
+              name="nama"
               class="form-control"
               placeholder="Contoh: Budi Santoso"
               required
@@ -353,155 +383,91 @@
           </div>
 
           <div class="form-group">
-            <label for="email" class="required">Email</label>
+            <label for="email" class="required">Alamat Email (untuk pengiriman materi)</label>
             <input
               type="email"
               id="email"
+              name="email"
               class="form-control"
-              placeholder="Contoh: budi@example.com"
+              placeholder="Contoh: budi@gmail.com"
               required
             />
           </div>
 
           <div class="form-group">
             <div class="group-label required">
-              Berikan nilai rating materi ini
+              Nilai Rating Materi (1 = Kurang Puas, 10 = Sangat Bermanfaat)
             </div>
-            <div class="rating-group">
-              <input
-                type="radio"
-                name="rating"
-                id="rating1"
-                value="1"
-                required
-              /><label for="rating1">1</label>
-              <input type="radio" name="rating" id="rating2" value="2" /><label
-                for="rating2"
-                >2</label
-              >
-              <input type="radio" name="rating" id="rating3" value="3" /><label
-                for="rating3"
-                >3</label
-              >
-              <input type="radio" name="rating" id="rating4" value="4" /><label
-                for="rating4"
-                >4</label
-              >
-              <input type="radio" name="rating" id="rating5" value="5" /><label
-                for="rating5"
-                >5</label
-              >
-              <input type="radio" name="rating" id="rating6" value="6" /><label
-                for="rating6"
-                >6</label
-              >
-              <input type="radio" name="rating" id="rating7" value="7" /><label
-                for="rating7"
-                >7</label
-              >
-              <input type="radio" name="rating" id="rating8" value="8" /><label
-                for="rating8"
-                >8</label
-              >
-              <input type="radio" name="rating" id="rating9" value="9" /><label
-                for="rating9"
-                >9</label
-              >
-              <input
-                type="radio"
-                name="rating"
-                id="rating10"
-                value="10"
-              /><label for="rating10">10</label>
+            <div class="rating-container">
+              <input type="radio" name="rating" id="rating1" value="1" required /><label for="rating1">1</label>
+              <input type="radio" name="rating" id="rating2" value="2" /><label for="rating2">2</label>
+              <input type="radio" name="rating" id="rating3" value="3" /><label for="rating3">3</label>
+              <input type="radio" name="rating" id="rating4" value="4" /><label for="rating4">4</label>
+              <input type="radio" name="rating" id="rating5" value="5" /><label for="rating5">5</label>
+              <input type="radio" name="rating" id="rating6" value="6" /><label for="rating6">6</label>
+              <input type="radio" name="rating" id="rating7" value="7" /><label for="rating7">7</label>
+              <input type="radio" name="rating" id="rating8" value="8" /><label for="rating8">8</label>
+              <input type="radio" name="rating" id="rating9" value="9" /><label for="rating9">9</label>
+              <input type="radio" name="rating" id="rating10" value="10" /><label for="rating10">10</label>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="alasan" class="required"
-              >Alasan memberikan nilai tersebut</label
-            >
+            <label for="alasan" class="required">Alasan Memberikan Rating Tersebut</label>
             <textarea
               id="alasan"
+              name="alasan"
               class="form-control"
-              placeholder="Tuliskan alasan Anda..."
+              placeholder="Tuliskan alasan atau bagian materi yang paling berkesan..."
               required
             ></textarea>
           </div>
 
           <div class="form-group">
-            <label for="pesan" class="required"
-              >Pesan dan Kesan untuk Pemateri</label
-            >
+            <label for="pesan" class="required">Pesan &amp; Saran untuk Pemateri</label>
             <textarea
               id="pesan"
+              name="pesan"
               class="form-control"
-              placeholder="Tuliskan pesan dan kesan Anda..."
+              placeholder="Tuliskan saran atau masukan untuk pengembangan sesi berikutnya..."
               required
             ></textarea>
           </div>
 
           <button type="submit" class="btn-submit" id="submitBtn">
-            <span id="submitText">Submit</span>
+            <span id="submitText">Kirim Feedback</span>
             <div class="spinner" id="loadingSpinner"></div>
           </button>
         </form>
 
         <div id="successState">
           <div class="success-icon">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </div>
-          <h2
-            style="
-              font-size: 24px;
-              font-weight: 700;
-              color: #202124;
-              margin-bottom: 12px;
-            "
-          >
-            Terima Kasih!
+          <h2 style="font-size: 22px; font-weight: 800; color: #1e293b; margin-bottom: 10px;">
+            Terima Kasih Atas Feedback Anda!
           </h2>
-          <p
-            style="
-              font-size: 15px;
-              color: #5f6368;
-              line-height: 1.6;
-              margin-bottom: 32px;
-            "
-          >
-            Feedback Anda telah berhasil dikirim. Seluruh paket materi (Slide Presentasi & 2 Modul AI) akan segera dikirimkan ke email Anda.
+          <p style="font-size: 14.5px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">
+            Data evaluasi berhasil terkirim. Paket slide materi dan modul panduan akan segera diproses ke email Anda.
           </p>
           <button
             onclick="window.location.reload()"
-            style="
-              background: transparent;
-              color: #0d8246;
-              border: none;
-              font-weight: 600;
-              font-size: 15px;
-              cursor: pointer;
-              padding: 8px 16px;
-              border-radius: 4px;
-              transition: background 0.2s;
-            "
-            onmouseover="this.style.background = '#e6f4ea'"
-            onmouseout="this.style.background = 'transparent'"
+            style="background: #f1f5f9; color: #0d8246; border: 1px solid #cbd5e1; font-weight: 700; font-size: 14px; cursor: pointer; padding: 10px 20px; border-radius: 8px; transition: all 0.2s;"
           >
             Kirim Feedback Lain
           </button>
         </div>
       </div>
-    </div>
+    </main>
+
+    <footer class="footer-disclaimer">
+      <p>
+        &copy; 2026 <strong>Yayasan Khouw Kalbe</strong> &bull; Presentasi Edukasi Mindful AI.<br />
+        Form ini hanya digunakan untuk evaluasi seminar &amp; pengiriman materi pembelajaran. Kami tidak pernah meminta kata sandi, kode OTP, atau informasi finansial/perbankan.
+      </p>
+    </footer>
 
     <script>
       const form = document.getElementById("feedbackForm");
@@ -510,6 +476,7 @@
       const loadingSpinner = document.getElementById("loadingSpinner");
       const successState = document.getElementById("successState");
       const alertBox = document.getElementById("alertBox");
+      const formHeader = document.getElementById("formHeader");
 
       function showAlert(message, type) {
         alertBox.textContent = message;
@@ -521,15 +488,13 @@
 
         const nama = document.getElementById("nama").value.trim();
         const email = document.getElementById("email").value.trim();
-        const ratingInput = document.querySelector(
-          'input[name="rating"]:checked',
-        );
+        const ratingInput = document.querySelector('input[name="rating"]:checked');
         const rating = ratingInput ? ratingInput.value : null;
         const alasan = document.getElementById("alasan").value.trim();
         const pesan = document.getElementById("pesan").value.trim();
 
         if (!nama || !email || !rating || !alasan || !pesan) {
-          showAlert("Mohon lengkapi semua kolom.", "error");
+          showAlert("Mohon lengkapi semua kolom yang bertanda bintang (*).", "error");
           return;
         }
 
@@ -550,22 +515,24 @@
             body: JSON.stringify({ nama, email, rating, alasan, pesan }),
           });
 
-          const result = await response.json();
+          const result = await response.json().catch(() => ({}));
 
           if (!response.ok) {
             throw new Error(
-              result.error || "Terjadi kesalahan saat submit data.",
+              result.error || "Terjadi kesalahan saat submit data."
             );
           }
 
           form.style.display = "none";
-          document.querySelector(".header").style.display = "none";
+          if (document.querySelector(".benefit-box")) {
+            document.querySelector(".benefit-box").style.display = "none";
+          }
           alertBox.style.display = "none";
           successState.style.display = "block";
           form.reset();
         } catch (error) {
           console.error(error);
-          showAlert(`Gagal menyimpan: ${error.message}`, "error");
+          showAlert(`Gagal mengirim feedback: ${error.message}`, "error");
         } finally {
           submitBtn.disabled = false;
           submitText.style.display = "block";
